@@ -2,7 +2,7 @@
 
 [Live website](https://heroquestcards.com)
 
-This HeroQuest project serves 2 purposes:
+This project serves 2 purposes:
 
 1. Generate HQ cards for the game: monsters, heroes, artifacts and more.
 2. Create a public repository of all the cards created by the community.
