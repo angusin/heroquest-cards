@@ -1,3 +1,17 @@
+<!-- NAVBAR -->
 <app-navbar></app-navbar>
-<app-sidebar></app-sidebar>
-<app-main-container></app-main-container>
+
+<!-- MAIN -->
+<div class="mx-auto max-w-screen-2xl">
+  <div class="mt-24 flex gap-8 md:mx-4">
+    <!-- SIDEBAR -->
+    <div
+      class="w-64 fixed transition-transform -translate-x-full md:translate-x-0">
+      <app-sidebar></app-sidebar>
+    </div>
+    <!-- CONTENT -->
+    <div class="flex-1 mx-4 md:ml-72 md:mr-0 h-auto">
+      <app-main-container></app-main-container>
+    </div>
+  </div>
+</div>

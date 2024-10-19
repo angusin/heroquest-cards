@@ -1,8 +1,6 @@
-<aside
-  class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
-  aria-label="Sidenav"
-  id="drawer-navigation">
-  <div class="overflow-y-auto py-5 px-3 h-full bg-white dark:bg-gray-800">
+<aside aria-label="Sidenav" id="drawer-navigation">
+  <div
+    class="overflow-y-auto p-4 h-full bg-white border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-lg border">
     <form action="#" method="GET" class="md:hidden mb-2">
       <label for="sidebar-search" class="sr-only">Search</label>
       <div class="relative">
@@ -27,22 +25,99 @@
           placeholder="Search" />
       </div>
     </form>
-    <button
-      type="button"
-      class="w-full text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800">
-      Create new card
-    </button>
 
-    <ul
-      class="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700"></ul>
-    <ul class="space-y-2">
-      <li>
-        <a
-          href="#"
-          class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-          <span class="ml-3">Filters</span>
-        </a>
-      </li>
-    </ul>
+    <h2 class="text-lg font-semibold text-gray-900 dark:text-white">
+      Filter by card type
+    </h2>
+
+    <div
+      class="pt-4 mt-2 space-y-2 border-t border-gray-200 dark:border-gray-700"></div>
+
+    <!-- CHECKBOX FILTERS -->
+    <div class="grid grid-cols-1 gap-2">
+      <div class="flex items-center">
+        <input
+          id="hp"
+          type="checkbox"
+          value=""
+          class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-yellow-600 focus:ring-yellow-500 dark:focus:ring-yellow-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+
+        <label
+          for="hp"
+          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+          Monster
+        </label>
+      </div>
+
+      <div class="flex items-center">
+        <input
+          id="benq"
+          type="checkbox"
+          value=""
+          class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-yellow-600 focus:ring-yellow-500 dark:focus:ring-yellow-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+
+        <label
+          for="benq"
+          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+          Hero
+        </label>
+      </div>
+
+      <div class="flex items-center">
+        <input
+          id="rockstar"
+          type="checkbox"
+          value=""
+          class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-yellow-600 focus:ring-yellow-500 dark:focus:ring-yellow-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+
+        <label
+          for="rockstar"
+          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+          Artifact
+        </label>
+      </div>
+
+      <div class="flex items-center">
+        <input
+          id="hola"
+          type="checkbox"
+          value=""
+          class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-yellow-600 focus:ring-yellow-500 dark:focus:ring-yellow-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+
+        <label
+          for="hola"
+          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+          Treasure
+        </label>
+      </div>
+
+      <div class="flex items-center">
+        <input
+          id="spell"
+          type="checkbox"
+          value=""
+          class="w-4 h-4 cursor-pointer bg-gray-100 border-gray-300 rounded text-yellow-600 focus:ring-yellow-500 dark:focus:ring-yellow-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+
+        <label
+          for="spell"
+          class="ml-2 cursor-pointer text-sm font-medium text-gray-900 dark:text-gray-300">
+          Spell
+        </label>
+      </div>
+
+      <div class="flex items-center">
+        <input
+          id="equipment"
+          type="checkbox"
+          value=""
+          class="w-4 h-4 cursor-pointer bg-gray-100 border-gray-300 rounded text-yellow-600 focus:ring-yellow-500 dark:focus:ring-yellow-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+
+        <label
+          for="equipment"
+          class="ml-2 cursor-pointer text-sm font-medium text-gray-900 dark:text-gray-300">
+          Equipment
+        </label>
+      </div>
+    </div>
   </div>
 </aside>
