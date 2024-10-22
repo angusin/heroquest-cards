@@ -1,54 +1,8 @@
 <div
   class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-8 gap-y-0">
-  <div class="card">
-    <app-card-container></app-card-container>
-  </div>
-  <div class="card">
-    <app-card-container></app-card-container>
-  </div>
-  <div class="card">
-    <app-card-container></app-card-container>
-  </div>
-  <div class="card">
-    <app-card-container></app-card-container>
-  </div>
-  <div class="card">
-    <app-card-container></app-card-container>
-  </div>
-  <div class="card">
-    <app-card-container></app-card-container>
-  </div>
-  <div class="card">
-    <app-card-container></app-card-container>
-  </div>
-  <div class="card">
-    <app-card-container></app-card-container>
-  </div>
-  <div class="card">
-    <app-card-container></app-card-container>
-  </div>
-  <div class="card">
-    <app-card-container></app-card-container>
-  </div>
-  <div class="card">
-    <app-card-container></app-card-container>
-  </div>
-  <div class="card">
-    <app-card-container></app-card-container>
-  </div>
-  <div class="card">
-    <app-card-container></app-card-container>
-  </div>
-  <div class="card">
-    <app-card-container></app-card-container>
-  </div>
-  <div class="card">
-    <app-card-container></app-card-container>
-  </div>
-  <div class="card">
-    <app-card-container></app-card-container>
-  </div>
-  <div class="card">
-    <app-card-container></app-card-container>
-  </div>
+  @for (card of cards; track card.id) {
+    <app-card-container [cardInfo]="card"></app-card-container>
+  } @empty {
+    <li>There are no items.</li>
+  }
 </div>

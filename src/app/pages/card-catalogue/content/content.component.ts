@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CardContainerComponent } from '../../../components/shared/card-container/card-container.component';
+import { heroquestCardsMock } from '../../../core/constants/example-cards';
 
 @Component({
   selector: 'app-card-catalogue-content',
@@ -8,4 +9,6 @@ import { CardContainerComponent } from '../../../components/shared/card-containe
   templateUrl: './content.component.html',
   styleUrl: './content.component.scss',
 })
-export class CardCatalogueContentComponent {}
+export class CardCatalogueContentComponent {
+  cards = heroquestCardsMock;
+}

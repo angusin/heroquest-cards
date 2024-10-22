@@ -1,7 +1,10 @@
 <div class="group">
   <!-- IMAGE -->
   <div class="relative w-full z-10">
-    <img class="mx-auto shadow-md" src="/assets/card.png" alt="" />
+    <img
+      class="mx-auto shadow-md"
+      [src]="cardInfo.imageUrl"
+      alt="'cardInfo.name'" />
   </div>
 
   <!-- CONTENT -->
@@ -9,31 +12,11 @@
     class="shadow-md rounded-b-2xl bg-white p-4 pt-12 dark:bg-gray-800 -translate-y-8">
     <div class="mb-2 flex items-center justify-between gap-4">
       <!-- CARD TYPE -->
-      <span
-        class="me-2 rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">
-        Monster
-      </span>
+      <app-card-type-tag [text]="cardInfo.type"></app-card-type-tag>
 
       <!-- FAVOURITE -->
-      <button
-        type="button"
-        data-tooltip-target="tooltip-add-to-favorites"
-        class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-        <span class="sr-only"> Add to Favorites </span>
-        <svg
-          class="h-5 w-5"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24">
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z" />
-        </svg>
-      </button>
+      <app-favorite-button
+        [isFavorite]="cardInfo.isFavorite"></app-favorite-button>
     </div>
 
     <!-- TITLE -->
@@ -41,7 +24,7 @@
       <a
         href="#"
         class="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white"
-        >Undead Dwarf King</a
+        >{{ cardInfo.name }}</a
       >
     </p>
   </div>
