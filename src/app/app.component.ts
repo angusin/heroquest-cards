@@ -1,13 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { FlowbiteService } from './core/services/flowbite.service';
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
-import { SidebarComponent } from './components/layout/sidebar/sidebar.component';
-import { MainContainerComponent } from './components/layout/main-container/main-container.component';
+import { CardCatalogueComponent } from './pages/card-catalogue/card-catalogue.component';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, SidebarComponent, MainContainerComponent],
+  imports: [
+    CommonModule,
+    NavbarComponent,
+    CardCatalogueComponent,
+    RouterModule,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
