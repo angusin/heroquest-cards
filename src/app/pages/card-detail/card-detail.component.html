@@ -1,12 +1,28 @@
-<div class="content">
-  <img
-    class="mb-8"
-    ngSrc="{{ card.imageUrl }}"
-    alt="card.name"
-    width="500"
-    height="300"
-    priority />
-</div>
-<div class="sidebar">
-  <h1 class="text-3xl pb-8 text-white">{{ card.name }}</h1>
-</div>
+<section class="px-4 md:px-0 mb-8">
+  <div
+    class="grid md:grid-cols-2 gap-8 mx-auto max-w-screen-lg justify-items-center">
+    <div class="">
+      <img
+        class=""
+        ngSrc="{{ card.imageUrl }}"
+        alt="card.name"
+        width="500"
+        height="300"
+        priority />
+    </div>
+
+    <div
+      class="mt-0 border w-full h-fit border-gray-200 rounded-lg shadow p-6 dark:bg-gray-800 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-4">
+        <h1
+          class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">
+          {{ card.name }}
+        </h1>
+        <app-card-type-tag [text]="card.type"></app-card-type-tag>
+        <app-favorite-button
+          [isFavorite]="card.isFavorite"></app-favorite-button>
+      </div>
+      <p class="mb-6 text-gray-500 dark:text-gray-400">Studio</p>
+    </div>
+  </div>
+</section>
