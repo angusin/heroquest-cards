@@ -1,1 +1,12 @@
-<p>card-detail works!</p>
+<div class="content">
+  <img
+    class="mb-8"
+    ngSrc="{{ card.imageUrl }}"
+    alt="card.name"
+    width="500"
+    height="300"
+    priority />
+</div>
+<div class="sidebar">
+  <h1 class="text-3xl pb-8 text-white">{{ card.name }}</h1>
+</div>
