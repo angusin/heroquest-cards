@@ -1,7 +1,8 @@
 <div class="group">
   <!-- IMAGE -->
-  <div class="relative w-full z-10">
+  <div class="relative w-full z-10 cursor-pointer">
     <img
+      [routerLink]="['/catalogue/detail', cardInfo.id]"
       class="mx-auto shadow-md"
       [src]="cardInfo.imageUrl"
       alt="'cardInfo.name'" />
@@ -39,10 +40,10 @@
     <!-- TITLE -->
     <p class="w-full text-center">
       <a
-        href="#"
-        class="text-sm sm:text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white"
-        >{{ cardInfo.name }}</a
-      >
+        [routerLink]="['/catalogue/detail', cardInfo.id]"
+        class="text-sm sm:text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">
+        {{ cardInfo.name }}
+      </a>
     </p>
   </div>
 </div>
