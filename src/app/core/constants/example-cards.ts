@@ -10,6 +10,8 @@ export const heroquestCardsMock: Card[] = [
     imageUrl: '/assets/card3.png',
     userId: 1,
     createDate: new Date('2024-01-10'),
+    description:
+      'I designed the Shield of the Ancients because I felt the game needed a powerful defense item with a unique twist. This shield doesnt just block damage—it turns the enemys strength against them. I envisioned it as an ancient relic passed down through generations, giving the wielder a momentary feeling of invincibility in the toughest battles. ',
   },
   {
     id: 2,
@@ -20,6 +22,8 @@ export const heroquestCardsMock: Card[] = [
     imageUrl: '/assets/card2.png',
     userId: 1,
     createDate: new Date('2024-01-12'),
+    description:
+      'This card came about because I wanted to give heroes a way to deal with enemies who have too much armor or protection. Phantom Strike allows the hero to bypass traditional defenses with a quick, ethereal attack. The idea is that the hero taps into some ancient or mystical power to make this one critical hit—perfect for players who want that feeling of a well-timed, decisive blow.',
   },
   {
     id: 3,
@@ -30,6 +34,8 @@ export const heroquestCardsMock: Card[] = [
     imageUrl: '/assets/card3.png',
     userId: 2,
     createDate: new Date('2024-01-15'),
+    description:
+      'I designed the Shield of the Ancients because I felt the game needed a powerful defense item with a unique twist. This shield doesnt just block damage—it turns the enemys strength against them. I envisioned it as an ancient relic passed down through generations, giving the wielder a momentary feeling of invincibility in the toughest battles. ',
   },
   {
     id: 4,
@@ -40,6 +46,8 @@ export const heroquestCardsMock: Card[] = [
     imageUrl: '/assets/card3.png',
     userId: 3,
     createDate: new Date('2024-01-17'),
+    description:
+      'This card came about because I wanted to give heroes a way to deal with enemies who have too much armor or protection. Phantom Strike allows the hero to bypass traditional defenses with a quick, ethereal attack. The idea is that the hero taps into some ancient or mystical power to make this one critical hit—perfect for players who want that feeling of a well-timed, decisive blow.',
   },
   {
     id: 5,
@@ -50,6 +58,8 @@ export const heroquestCardsMock: Card[] = [
     imageUrl: '/assets/card2.png',
     userId: 1,
     createDate: new Date('2024-01-20'),
+    description:
+      'I designed the Shield of the Ancients because I felt the game needed a powerful defense item with a unique twist. This shield doesnt just block damage—it turns the enemys strength against them. I envisioned it as an ancient relic passed down through generations, giving the wielder a momentary feeling of invincibility in the toughest battles. ',
   },
   {
     id: 6,
@@ -60,6 +70,8 @@ export const heroquestCardsMock: Card[] = [
     imageUrl: '/assets/card3.png',
     userId: 2,
     createDate: new Date('2024-01-22'),
+    description:
+      'This card came about because I wanted to give heroes a way to deal with enemies who have too much armor or protection. Phantom Strike allows the hero to bypass traditional defenses with a quick, ethereal attack. The idea is that the hero taps into some ancient or mystical power to make this one critical hit—perfect for players who want that feeling of a well-timed, decisive blow.',
   },
   {
     id: 7,
@@ -70,6 +82,8 @@ export const heroquestCardsMock: Card[] = [
     imageUrl: '/assets/card2.png',
     userId: 3,
     createDate: new Date('2024-01-25'),
+    description:
+      'I designed the Shield of the Ancients because I felt the game needed a powerful defense item with a unique twist. This shield doesnt just block damage—it turns the enemys strength against them. I envisioned it as an ancient relic passed down through generations, giving the wielder a momentary feeling of invincibility in the toughest battles. ',
   },
   {
     id: 8,
@@ -80,6 +94,8 @@ export const heroquestCardsMock: Card[] = [
     imageUrl: '/assets/card2.png',
     userId: 1,
     createDate: new Date('2024-01-27'),
+    description:
+      'This card came about because I wanted to give heroes a way to deal with enemies who have too much armor or protection. Phantom Strike allows the hero to bypass traditional defenses with a quick, ethereal attack. The idea is that the hero taps into some ancient or mystical power to make this one critical hit—perfect for players who want that feeling of a well-timed, decisive blow.',
   },
   {
     id: 9,
@@ -90,6 +106,8 @@ export const heroquestCardsMock: Card[] = [
     imageUrl: '/assets/card3.png',
     userId: 2,
     createDate: new Date('2024-01-30'),
+    description:
+      'I designed the Shield of the Ancients because I felt the game needed a powerful defense item with a unique twist. This shield doesnt just block damage—it turns the enemys strength against them. I envisioned it as an ancient relic passed down through generations, giving the wielder a momentary feeling of invincibility in the toughest battles. ',
   },
   {
     id: 10,
@@ -100,5 +118,7 @@ export const heroquestCardsMock: Card[] = [
     imageUrl: '/assets/card2.png',
     userId: 2,
     createDate: new Date('2024-02-02'),
+    description:
+      'This card came about because I wanted to give heroes a way to deal with enemies who have too much armor or protection. Phantom Strike allows the hero to bypass traditional defenses with a quick, ethereal attack. The idea is that the hero taps into some ancient or mystical power to make this one critical hit—perfect for players who want that feeling of a well-timed, decisive blow.',
   },
 ];
