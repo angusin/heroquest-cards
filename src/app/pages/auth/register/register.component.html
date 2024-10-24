@@ -1,0 +1,73 @@
+<div class="flex">
+  <!-- LEFT SIDE -->
+  <div class="bg-primary p-12 flex flex-col">
+    <div class="flex items-center gap-4">
+      <div class="flex-1">
+        <app-social-button
+          provider="Google"
+          iconUrl="https://www.google.com/favicon.ico">
+        </app-social-button>
+      </div>
+      <div class="flex-1">
+        <app-social-button
+          provider="Apple"
+          iconUrl="https://www.apple.com/favicon.ico">
+        </app-social-button>
+      </div>
+    </div>
+    <div class="flex items-center my-4">
+      <div class="flex-1 h-px bg-gray-700"></div>
+      <span class="px-4 text-gray-400">or</span>
+      <div class="flex-1 h-px bg-gray-700"></div>
+    </div>
+
+    <form>
+      <app-input-field
+        label="What should we call you?"
+        name="name"
+        placeholder="e.g. Bonnie Green">
+      </app-input-field>
+
+      <app-input-field
+        label="Your email"
+        type="email"
+        name="email"
+        placeholder="name@company.com">
+      </app-input-field>
+
+      <app-input-field
+        label="Your password"
+        type="password"
+        name="password"
+        placeholder="••••••••">
+      </app-input-field>
+
+      <app-checkbox name="terms">
+        By signing up, you are creating an account and you agree to
+        <a href="#" class="text-primary hover:underline">Terms of Use</a> and
+        <a href="#" class="text-primary hover:underline">Privacy Policy</a>.
+      </app-checkbox>
+
+      <button
+        type="submit"
+        class="w-full py-3 bg-blue-600 hover:bg-blue-800 text-white rounded-lg mb-4 transition-colors">
+        Create an account
+      </button>
+
+      <p class="text-center text-gray-400">
+        Already have an account?
+        <a href="#" class="text-primary hover:underline">Login here</a>
+      </p>
+    </form>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="bg-primary p-12 flex flex-col">
+    <div class="mb-8 flex items-start gap-4">
+      <img [src]="'assets/hq_logo.png'" alt="Flowbite" class="h-8 my-2" />
+      <h2 class="text-5xl font-bold text-white mb-6">
+        HeroQuest community cards
+      </h2>
+    </div>
+  </div>
+</div>

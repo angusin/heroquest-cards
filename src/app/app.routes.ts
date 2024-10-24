@@ -16,6 +16,10 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'auth/:action',
+    loadComponent: () => import('./pages/auth/auth.page'),
+  },
+  {
     path: '**', // Wildcard route for a 404 page
     redirectTo: 'catalogue',
   },
