@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.2.0](https://github.com/angusin/heroquest-cards/compare/v1.1.0...v1.2.0) (2024-10-25)
+
+
+### Features
+
+* add download button and user avatar ([3080218](https://github.com/angusin/heroquest-cards/commit/3080218f28edbe84fb5d8f4b397c566fcb593951))
+* detail page first steps ([19331d8](https://github.com/angusin/heroquest-cards/commit/19331d845007aeb9c2b12eff0ba07bc5962c135e))
+* main layout with 2 columns ([404e129](https://github.com/angusin/heroquest-cards/commit/404e12916968c2639a2238fd51983b9ec470a4ae))
+* navigate to detail page ([fe7f42a](https://github.com/angusin/heroquest-cards/commit/fe7f42a02720478753c7ec2afd77bb4950a44c40))
+
 ## [1.1.0](https://github.com/angusin/heroquest-cards/compare/v1.0.0...v1.1.0) (2024-10-22)
 
 
