@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, InputSignal, Signal, computed, input } from '@angular/core';
 import { Card } from '../../core/interfaces/common';
-import { ActivatedRoute } from '@angular/router';
 import { heroquestCardsMock } from '../../core/constants/example-cards';
 import { NgOptimizedImage } from '@angular/common';
 import { CardTypeTagComponent } from '../../components/shared/card-type-tag/card-type-tag.component';
@@ -13,27 +12,11 @@ import { FavoriteButtonComponent } from '../../components/shared/favorite-button
   templateUrl: './card-detail.component.html',
   styleUrl: './card-detail.component.scss',
 })
-export class CardDetailComponent implements OnInit {
+export class CardDetailComponent {
+  cardId: InputSignal<string> = input.required<string>();
   cards = heroquestCardsMock;
-  card!: Card;
 
-  constructor(private route: ActivatedRoute) {}
-
-  ngOnInit() {
-    this.route.params.subscribe(params => {
-      const cardId = params['id'];
-      if (cardId) {
-        const foundCard = this.getCard(+cardId);
-        if (foundCard) {
-          this.card = foundCard;
-        } else {
-          console.log(`Card with id ${cardId} not found`);
-        }
-      }
-    });
-  }
-
-  getCard(cardId: number): Card | undefined {
-    return this.cards.find(card => card.id === cardId);
-  }
+  card: Signal<Card> = computed(() => {
+    return this.cards.find(card => card.id === +this.cardId()) ?? ({} as Card);
+  });
 }
