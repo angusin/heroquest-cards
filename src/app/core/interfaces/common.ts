@@ -7,4 +7,5 @@ export interface Card {
   imageUrl: string;
   userId: number;
   createDate: Date;
+  description: string;
 }

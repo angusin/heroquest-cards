@@ -1,1 +1,65 @@
-<p>card-detail works!</p>
+<section class="px-4 md:px-0 mb-8">
+  <div
+    class="grid md:grid-cols-2 gap-8 mx-auto max-w-screen-lg justify-items-center">
+    <div class="">
+      <img
+        class=""
+        ngSrc="{{ card.imageUrl }}"
+        alt="card.name"
+        width="500"
+        height="300"
+        priority />
+    </div>
+
+    <div
+      class="mt-0 border w-full h-fit border-gray-200 rounded-lg shadow p-6 dark:bg-gray-800 dark:border-gray-700">
+      <div class="flex items-center justify-between mb-4">
+        <app-card-type-tag [text]="card.type"></app-card-type-tag>
+        <app-favorite-button
+          [isFavorite]="card.isFavorite"></app-favorite-button>
+      </div>
+      <h1
+        class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">
+        {{ card.name }}
+      </h1>
+      <div
+        class="pt-4 mt-2 space-y-2 border-t border-gray-200 dark:border-gray-700"></div>
+      <p class="mb-6 text-gray-500 dark:text-gray-400">
+        {{ card.description }}
+      </p>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <img
+            class="w-10 h-10 rounded-full"
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gough.png"
+            alt="" />
+          <div class="font-medium dark:text-white">
+            <div>Jese Leos</div>
+            <div class="text-sm text-gray-500 dark:text-gray-400">23 cards</div>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="inline-flex items-center rounded-lg bg-yellow-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-yellow-800 focus:outline-none focus:ring-4 focus:ring-yellow-300 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-primary-800">
+          <svg
+            class="-ms-2 me-2 h-5 w-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4" />
+          </svg>
+
+          Download
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
