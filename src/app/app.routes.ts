@@ -16,7 +16,7 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'auth/:action',
+    path: 'auth/:formType',
     loadComponent: () => import('./pages/auth/auth.page'),
   },
   {

@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, input, InputSignal } from '@angular/core';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
@@ -10,8 +9,7 @@ import { RegisterComponent } from './register/register.component';
   templateUrl: './auth.page.html',
 })
 export default class AuthPageComponent {
-  action: 'login' | 'register' = 'register';
-  constructor(private route: ActivatedRoute) {
-    this.action = this.route.snapshot.params['action'];
-  }
+  // This is de param from url catching with a
+  // Is an InputSignal and to detect change is neccesary import in app.config.ts the withComponentInputBinding()
+  formType: InputSignal<string> = input.required<string>();
 }
