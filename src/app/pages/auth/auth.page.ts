@@ -8,7 +8,7 @@ import { RegisterComponent } from './register/register.component';
   imports: [LoginComponent, RegisterComponent],
   templateUrl: './auth.page.html',
 })
-export default class AuthPageComponent {
+export default class AuthPage {
   // This is de param from url catching with a
   // Is an InputSignal and to detect change is neccesary import in app.config.ts the withComponentInputBinding()
   formType: InputSignal<string> = input.required<string>();
