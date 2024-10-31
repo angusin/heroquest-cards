@@ -1,89 +1,92 @@
-<div class="flex justify-center flex-col items-center h-screen">
-  <form
+<div class="">
+  <div
     class="bg-primary p-8 bg-white rounded-lg shadow dark:border dark:bg-gray-800 dark:border-gray-700 max-w-sm w-full h-auto">
-    <div class="mb-4">
-      <div>
+    <form>
+      <div class="mb-4">
+        <div>
+          <label
+            for="username"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Username</label
+          >
+          <input
+            type="text"
+            id="username"
+            class="input-primary"
+            placeholder="John"
+            required />
+        </div>
+      </div>
+      <div class="mb-4">
         <label
-          for="username"
+          for="email"
           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >Username</label
+          >Email address</label
         >
         <input
-          type="text"
-          id="username"
+          type="email"
+          id="email"
           class="input-primary"
-          placeholder="John"
+          placeholder="john.doe@company.com"
           required />
       </div>
-    </div>
-    <div class="mb-4">
-      <label
-        for="email"
-        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >Email address</label
-      >
-      <input
-        type="email"
-        id="email"
-        class="input-primary"
-        placeholder="john.doe@company.com"
-        required />
-    </div>
-    <div class="mb-4">
-      <label
-        for="password"
-        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >Password</label
-      >
-      <input
-        type="password"
-        id="password"
-        class="input-primary"
-        placeholder="•••••••••"
-        required />
-    </div>
-
-    <div class="flex items-center my-5">
-      <div class="flex-1 h-px bg-gray-700"></div>
-      <span class="px-4 text-gray-400">or</span>
-      <div class="flex-1 h-px bg-gray-700"></div>
-    </div>
-
-    <button class="btn-social mb-6">
-      <img
-        src="https://www.google.com/favicon.ico"
-        class="social-icon w-5 h-5 mr-3"
-        alt="Google logo" />
-      Sign up with Google
-    </button>
-
-    <div class="flex items-start mb-6">
-      <div class="flex items-center h-5">
+      <div class="mb-4">
+        <label
+          for="password"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >Password</label
+        >
         <input
-          id="remember"
-          type="checkbox"
-          value=""
-          class="input-checkbox"
+          type="password"
+          id="password"
+          class="input-primary"
+          placeholder="•••••••••"
           required />
       </div>
-      <label
-        for="remember"
-        class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-        >I agree with the
-        <a href="#" class="text-blue-600 hover:underline dark:text-blue-500"
-          >terms and conditions</a
-        >.</label
-      >
-    </div>
-    <button type="submit" class="btn-primary">Create an account</button>
-  </form>
 
-  <p class="text-center text-gray-400 text-sm font-medium mt-8">
-    Already have an account?
-    <a
-      [routerLink]="['/auth/login']"
-      class="text-blue-600 dark:text-blue-500 hover:underline"
-      >Login here</a
-    >
-  </p>
+      <div class="flex items-center my-5">
+        <div class="flex-1 h-px bg-gray-700"></div>
+        <span class="px-4 text-gray-400">or</span>
+        <div class="flex-1 h-px bg-gray-700"></div>
+      </div>
+
+      <button class="btn-social mb-6">
+        <img
+          src="https://www.google.com/favicon.ico"
+          class="social-icon w-5 h-5 mr-3"
+          alt="Google logo" />
+        Sign up with Google
+      </button>
+
+      <div class="flex items-start mb-6">
+        <div class="flex items-center h-5">
+          <input
+            id="remember"
+            type="checkbox"
+            value=""
+            class="input-checkbox"
+            required />
+        </div>
+        <label
+          for="remember"
+          class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >I agree with the
+          <a href="#" class="text-blue-600 hover:underline dark:text-blue-500"
+            >terms and conditions</a
+          >.</label
+        >
+      </div>
+      <button type="submit" class="btn-primary">Create an account</button>
+    </form>
+
+    <p class="text-center text-gray-400 text-sm font-medium mt-8">
+      Already have an account?
+      <a
+        replaceUrl="true"
+        [routerLink]="['/auth/login']"
+        class="text-blue-600 dark:text-blue-500 hover:underline"
+        >Login here</a
+      >
+    </p>
+  </div>
 </div>
