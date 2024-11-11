@@ -1,20 +1,21 @@
 <div class="w-full flex justify-center items-center h-full">
   <div
     class="bg-primary p-8 bg-white rounded-lg shadow dark:border dark:bg-gray-800 dark:border-gray-700 max-w-sm w-full h-auto">
-    <form>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="mb-4">
         <div>
           <label
-            for="username"
+            for="email"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Username</label
+            >{{ 'auth.label.email' | translate }}</label
           >
           <input
             type="text"
-            id="username"
+            id="email"
             class="input-primary"
-            placeholder="John"
-            required />
+            placeholder="john.doe@company.com"
+            required
+            formControlName="email" />
         </div>
       </div>
 
@@ -22,17 +23,21 @@
         <label
           for="password"
           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >Password</label
+          >{{ 'auth.label.password' | translate }}</label
         >
         <input
           type="password"
           id="password"
           class="input-primary"
           placeholder="•••••••••"
-          required />
+          required
+          minlength="8"
+          formControlName="password" />
       </div>
 
-      <button type="submit" class="btn-primary">Login</button>
+      <button type="submit" class="btn-primary" [disabled]="!loginForm.valid">
+        {{ 'auth.label.sign-in' | translate }}
+      </button>
     </form>
 
     <div class="flex items-center my-5">
@@ -46,15 +51,15 @@
         src="https://www.google.com/favicon.ico"
         class="social-icon w-5 h-5 mr-3"
         alt="Google logo" />
-      Login with Google
+      {{ 'auth.label.google-sign-in' | translate }}
     </button>
     <p class="text-center text-gray-400 text-sm font-medium mt-8">
-      Don't have an account?
+      {{ 'auth.text.dont-have-account' | translate }}
       <a
         replaceUrl="true"
         [routerLink]="['/auth/register']"
         class="text-blue-600 dark:text-blue-500 hover:underline"
-        >Register here</a
+        >{{ 'auth.text.register-here' | translate }}</a
       >
     </p>
   </div>

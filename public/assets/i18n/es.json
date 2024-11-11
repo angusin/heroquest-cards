@@ -1,1 +1,17 @@
-{ "hello": { "test": "hola test" } }
+{
+  "auth.label.email": "Email",
+  "auth.label.password": "Contraseña",
+  "auth.label.username": "Nombre de usuario",
+  "auth.label.forgot-password": "¿Olvidaste tu contraseña?",
+  "auth.label.sign-in": "Iniciar sesión",
+  "auth.label.google-sign-in": "Iniciar sesión con Google",
+  "auth.label.sign-up": "Registrarse",
+  "auth.label.google-sign-up": "Regístrate con Google",
+  "auth.text.dont-have-account": "¿Todavía no tienes una cuenta?",
+  "auth.text.have-account": "¿Ya tienes una cuenta?",
+  "auth.text.register-here": "Regístrate aquí",
+  "auth.text.or": "o",
+  "auth.text.login": "Iniciar sesión",
+  "auth.text.accept-terms": "Estoy de acuerdo con los ",
+  "auth.text.terms": "términos y condiciones"
+}

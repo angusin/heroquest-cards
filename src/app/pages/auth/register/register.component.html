@@ -7,7 +7,7 @@
           <label
             for="username"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Username</label
+            >{{ 'auth.label.username' | translate }}</label
           >
           <input
             type="text"
@@ -21,7 +21,7 @@
         <label
           for="email"
           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >Email address</label
+          >{{ 'auth.label.email' | translate }}</label
         >
         <input
           type="email"
@@ -34,7 +34,7 @@
         <label
           for="password"
           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >Password</label
+          >{{ 'auth.label.password' | translate }}</label
         >
         <input
           type="password"
@@ -46,7 +46,7 @@
 
       <div class="flex items-center my-5">
         <div class="flex-1 h-px bg-gray-700"></div>
-        <span class="px-4 text-gray-400">or</span>
+        <span class="px-4 text-gray-400">{{ 'auth.text.or' | translate }}</span>
         <div class="flex-1 h-px bg-gray-700"></div>
       </div>
 
@@ -55,7 +55,7 @@
           src="https://www.google.com/favicon.ico"
           class="social-icon w-5 h-5 mr-3"
           alt="Google logo" />
-        Sign up with Google
+        {{ 'auth.label.google-sign-up' | translate }}
       </button>
 
       <div class="flex items-start mb-6">
@@ -70,9 +70,11 @@
         <label
           for="remember"
           class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-          >I agree with the
-          <a href="#" class="text-blue-600 hover:underline dark:text-blue-500"
-            >terms and conditions</a
+          >{{ 'auth.text.accept-terms' | translate }}
+          <a
+            href="#"
+            class="text-blue-600 hover:underline dark:text-blue-500"
+            >{{ 'auth.text.terms' | translate }}</a
           >.</label
         >
       </div>
@@ -80,12 +82,12 @@
     </form>
 
     <p class="text-center text-gray-400 text-sm font-medium mt-8">
-      Already have an account?
+      {{ 'auth.text.have-account' | translate }}
       <a
         replaceUrl="true"
         [routerLink]="['/auth/login']"
         class="text-blue-600 dark:text-blue-500 hover:underline"
-        >Login here</a
+        >{{ 'auth.text.login' | translate }}</a
       >
     </p>
   </div>
