@@ -8,10 +8,10 @@ import { FavoriteButtonComponent, CardTypeTagComponent } from '@components';
   selector: 'app-card-detail',
   standalone: true,
   imports: [NgOptimizedImage, CardTypeTagComponent, FavoriteButtonComponent],
-  templateUrl: './card-detail.component.html',
-  styleUrl: './card-detail.component.scss',
+  templateUrl: './card-detail.page.html',
+  styleUrl: './card-detail.page.scss',
 })
-export class CardDetailComponent {
+export default class CardDetailPage {
   cardId: InputSignal<string> = input.required<string>();
   cards = heroquestCardsMock;
 

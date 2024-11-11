@@ -13,7 +13,7 @@ import { CardCatalogueContentComponent } from './content/content.component';
     CardCatalogueSidebarComponent,
     CardCatalogueContentComponent,
   ],
-  templateUrl: './card-catalogue.component.html',
-  styleUrl: './card-catalogue.component.scss',
+  templateUrl: './card-catalogue.page.html',
+  styleUrl: './card-catalogue.page.scss',
 })
-export class CardCatalogueComponent {}
+export default class CardCataloguePage {}
