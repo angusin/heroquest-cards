@@ -3,6 +3,6 @@
   @for (card of cards; track card.id) {
     <app-card-container [cardInfo]="card"></app-card-container>
   } @empty {
-    <li>There are no items.</li>
+    <p class="text-center text-gray-400">There are no items.</p>
   }
 </div>

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { CardContainerComponent } from '../../../components/shared/card-container/card-container.component';
-import { heroquestCardsMock } from '../../../core/constants/example-cards';
+import { CardContainerComponent } from '@components';
+
+import { heroquestCardsMock } from '@core/constants/example-cards';
+import { Card } from '@core/interfaces/common';
 
 @Component({
   selector: 'app-card-catalogue-content',
@@ -10,5 +12,5 @@ import { heroquestCardsMock } from '../../../core/constants/example-cards';
   styleUrl: './content.component.scss',
 })
 export class CardCatalogueContentComponent {
-  cards = heroquestCardsMock;
+  cards: Card[] = heroquestCardsMock;
 }

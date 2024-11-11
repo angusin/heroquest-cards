@@ -1,9 +1,8 @@
 import { Component, InputSignal, Signal, computed, input } from '@angular/core';
-import { Card } from '../../core/interfaces/common';
-import { heroquestCardsMock } from '../../core/constants/example-cards';
+import { Card } from '@core/interfaces/common';
+import { heroquestCardsMock } from '@core/constants/example-cards';
 import { NgOptimizedImage } from '@angular/common';
-import { CardTypeTagComponent } from '../../components/shared/card-type-tag/card-type-tag.component';
-import { FavoriteButtonComponent } from '../../components/shared/favorite-button/favorite-button.component';
+import { FavoriteButtonComponent, CardTypeTagComponent } from '@components';
 
 @Component({
   selector: 'app-card-detail',

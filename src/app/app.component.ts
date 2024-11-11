@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FlowbiteService } from './core/services/flowbite.service';
-import { NavbarComponent } from './components/layout/navbar/navbar.component';
+
 import { CardCatalogueComponent } from './pages/card-catalogue/card-catalogue.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { NavbarComponent } from '@components';
+import { FlowbiteService } from '@core/services/flowbite.service';
 
 @Component({
   selector: 'app-root',
