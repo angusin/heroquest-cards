@@ -2,16 +2,16 @@
   "auth.label.email": "Email",
   "auth.label.password": "Password",
   "auth.label.username": "Username",
-  "auth.label.forgot-password": "Forgot password?",
-  "auth.label.sign-in": "Sign in",
-  "auth.label.google-sign-in": "Sign in with Google",
-  "auth.label.sign-up": "Sign up",
-  "auth.label.google-sign-up": "Sign up with Google",
+  "auth.text.forgot-password": "Forgot your password?",
   "auth.text.dont-have-account": "Don't have an account yet?",
   "auth.text.have-account": "Already have an account?",
   "auth.text.register-here": "Register here",
   "auth.text.or": "or",
   "auth.text.login": "Login here",
   "auth.text.accept-terms": "I agree with the ",
-  "auth.text.terms": "terms and conditions"
+  "auth.text.terms": "terms and conditions",
+  "auth.button.create-account": "Create an account",
+  "auth.button.sign-in": "Sign in",
+  "auth.button.google-sign-in": "Sign in with Google",
+  "auth.button.google-sign-up": "Sign up with Google"
 }
