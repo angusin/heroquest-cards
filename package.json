@@ -55,5 +55,10 @@
     "prettier-eslint": "^16.3.0",
     "typescript": "~5.4.2",
     "typescript-eslint": "^8.2.0"
+  },
+  "overrides": {
+    "@angular-devkit/build-angular": {
+      "tailwindcss": "^4.0.0"
+    }
   }
 }
