@@ -6,7 +6,6 @@ import { CardCatalogueContentComponent } from './content/content.component';
 
 @Component({
   selector: 'app-card-catalogue',
-  standalone: true,
   imports: [
     SidebarSmallComponent,
     LargeMainContentComponent,
