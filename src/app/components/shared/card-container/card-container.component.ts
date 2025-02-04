@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-card-container',
-  standalone: true,
   imports: [CardTypeTagComponent, FavoriteButtonComponent, RouterModule],
   templateUrl: './card-container.component.html',
   styleUrl: './card-container.component.scss',

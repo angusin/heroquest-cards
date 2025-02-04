@@ -3,7 +3,6 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card-type-tag',
-  standalone: true,
   imports: [CommonModule],
   templateUrl: './card-type-tag.component.html',
   styleUrl: './card-type-tag.component.scss',
