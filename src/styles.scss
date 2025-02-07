@@ -1,2 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @use 'tailwindcss';
+
+@font-face {
+  font-family: 'CarterSansW01-SmBd';
+  src: url('/assets/fonts/Carter_Sans_W01_SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CarterSansW01-Bd';
+  src: url('/assets/fonts/Carter_Sans_W01_Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
