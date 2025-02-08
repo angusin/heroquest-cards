@@ -1,52 +1,51 @@
-<div>
+<!-- Monster main image -->
+<div class="mb-4">
   <label
     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
     for="monster_image"
-    >Monster image</label
-  >
+    >Monster image<span class="text-xs text-gray-600 dark:text-gray-400">
+      (.PNG image with transparent background)</span
+    >
+  </label>
   <input
-    class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
     id="monster_image"
+    class="w-full border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-400 font-medium text-sm bg-gray-50 dark:bg-gray-700 file:cursor-pointer cursor-pointer file:border-0 file:py-2 file:px-4 file:mr-4 file:bg-gray-600 file:hover:bg-gray-700 file:text-white rounded-lg"
     type="file"
     accept="image/png"
     (change)="onMonsterImageUpload($event)" />
-  <p
-    class="mt-1 text-sm text-gray-500 dark:text-gray-300"
-    id="monster_image_help">
-    * Upload a .PNG image with a transparent background.
-  </p>
+</div>
 
-  <div>
-    <label
-      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-      for="monster_icon"
-      >Monster icon</label
-    >
-    <input
-      class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-      id="monster_icon"
-      type="file"
-      accept="image/png"
-      (change)="onMonsterIconUpload($event)" />
-    <p
-      class="mt-1 text-sm text-gray-500 dark:text-gray-300"
-      id="monster_icon_help">
-      * Upload a .PNG image with a transparent background.
-    </p>
-  </div>
+<!-- Monster icon image -->
+<div class="mb-4">
+  <label
+    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+    for="monster_image"
+    >Monster icon<span class="text-xs text-gray-600 dark:text-gray-400">
+      (.PNG image with transparent background)</span
+    ></label
+  >
+  <input
+    id="monster_image"
+    class="w-full border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-400 font-medium text-sm bg-gray-50 dark:bg-gray-700 file:cursor-pointer cursor-pointer file:border-0 file:py-2 file:px-4 file:mr-4 file:bg-gray-600 file:hover:bg-gray-700 file:text-white rounded-lg"
+    type="file"
+    accept="image/png"
+    (change)="onMonsterIconUpload($event)" />
+</div>
 
-  <div>
-    <label
-      for="description"
-      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-      >Descripción</label
-    >
-    <textarea
-      id="description"
-      rows="4"
-      class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-      placeholder="Write your thoughts here..."
-      (input)="onDescriptionInputChange($event)"
-      (paste)="onDescriptionInputChange($event)"></textarea>
-  </div>
+<!-- Monster description -->
+<div>
+  <label
+    for="description"
+    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+    >Description<span class="text-xs text-gray-600 dark:text-gray-400">
+      (Optional)</span
+    ></label
+  >
+  <textarea
+    id="description"
+    rows="4"
+    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+    placeholder="Write the monster description..."
+    (input)="onDescriptionInputChange($event)"
+    (paste)="onDescriptionInputChange($event)"></textarea>
 </div>
