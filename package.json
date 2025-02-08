@@ -61,6 +61,10 @@
   "overrides": {
     "@angular-devkit/build-angular": {
       "tailwindcss": "^4.0.0"
+    },
+    "ng2-konva": {
+      "@angular/core": "^19.0.0",
+      "@angular/common": "^19.0.0"
     }
   }
 }

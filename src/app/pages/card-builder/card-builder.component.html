@@ -1,0 +1,19 @@
+<section class="px-4 md:px-0 mb-8 bg-blue-800">
+  <div
+    class="grid md:grid-cols-2 gap-8 mx-auto max-w-screen-lg justify-items-center bg-red-900">
+    <div
+      class="mt-0 border w-full h-fit border-gray-200 rounded-lg shadow p-6 dark:bg-gray-800 dark:border-gray-700">
+      <app-card-builder-form
+        (descriptionInputChange)="onDescriptionInputChange($event)"
+        (monsterImageUpload)="onMonsterImageUpload($event)"
+        (monsterIconUpload)="onMonsterIconUpload($event)" />
+    </div>
+
+    <div class="bg-red-600 w-full">
+      <app-card-builder-canvas
+        [descriptionInput]="descriptionInput"
+        [monsterImage]="monsterImage"
+        [monsterIcon]="monsterIcon" />
+    </div>
+  </div>
+</section>
