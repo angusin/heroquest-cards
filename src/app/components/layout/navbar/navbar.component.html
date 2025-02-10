@@ -3,40 +3,6 @@
   <nav class="mx-auto max-w-screen-2xl px-4 py-2.5 md:px-8">
     <div class="flex flex-wrap items-center justify-between">
       <div class="flex items-center justify-start">
-        <!-- HAMBURGER BUTTON -->
-
-        <!--
-        This inside the button toggles the sidebar, but it breaks in desktop view
-        data-drawer-target="drawer-navigation"
-        data-drawer-toggle="drawer-navigation"
-        aria-controls="drawer-navigation"
-        -->
-        <button
-          class="mr-2 cursor-pointer rounded-lg p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:ring-2 focus:ring-gray-100 md:hidden dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:bg-gray-700 dark:focus:ring-gray-700">
-          <svg
-            aria-hidden="true"
-            class="h-6 w-6"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"></path>
-          </svg>
-          <svg
-            aria-hidden="true"
-            class="hidden h-6 w-6"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              fill-rule="evenodd"
-              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-              clip-rule="evenodd"></path>
-          </svg>
-          <span class="sr-only">Toggle sidebar</span>
-        </button>
         <!-- LOGO -->
         <a href="/" class="mr-4 flex items-center justify-between">
           <img [src]="'assets/hq_logo.png'" width="40" alt="" />
@@ -55,7 +21,7 @@
         <button
           [routerLink]="['/builder']"
           type="button"
-          class="me-2 mr-2 hidden items-center rounded-lg bg-yellow-600 py-2.5 pr-4 pl-2.5 text-center text-sm font-medium text-white hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 focus:outline-none sm:flex dark:focus:ring-yellow-900">
+          class="me-2 mr-2 hidden cursor-pointer items-center rounded-lg bg-yellow-600 py-2.5 pr-4 pl-2.5 text-center text-sm font-medium text-white hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 focus:outline-none sm:flex dark:focus:ring-yellow-900">
           <svg
             class="mr-1 h-5 w-5 text-white"
             aria-hidden="true"
@@ -74,34 +40,10 @@
           Create card
         </button>
 
-        <!-- SEARCH INPUT -->
-        <form action="#" method="GET" class="hidden md:block md:pl-2">
-          <label for="topbar-search" class="sr-only">Search</label>
-          <div class="relative md:w-52">
-            <div
-              class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-              <svg
-                class="h-5 w-5 text-gray-500 dark:text-gray-400"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"></path>
-              </svg>
-            </div>
-            <input
-              type="text"
-              name="email"
-              id="topbar-search"
-              class="block w-full rounded-lg bg-gray-50 p-2.5 pl-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
-              placeholder="Search" />
-          </div>
-        </form>
+        <!-- USER MENU BUTTON -->
         <button
           type="button"
-          class="mx-3 flex rounded-full bg-gray-800 text-sm focus:ring-4 focus:ring-gray-300 md:mr-0 dark:focus:ring-gray-600"
+          class="mx-3 flex cursor-pointer rounded-full bg-gray-800 text-sm focus:ring-4 focus:ring-gray-300 md:mr-0 dark:focus:ring-gray-600"
           id="user-menu-button"
           aria-expanded="false"
           data-dropdown-toggle="dropdown">
