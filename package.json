@@ -22,14 +22,15 @@
     "@angular/platform-server": "^19.1.4",
     "@angular/router": "^19.1.4",
     "@angular/ssr": "^19.1.5",
-    "@tailwindcss/postcss": "^4.0.3",
+    "@tailwindcss/postcss": "^4.0.5",
+    "autoprefixer": "^10.4.20",
     "express": "^4.18.2",
-    "flowbite": "^3.1.1",
-    "postcss": "^8.5.1",
-    "konva": "^9.3.16",
+    "flowbite": "^3.1.2",
+    "konva": "^9.3.18",
     "ng2-konva": "^9.0.0",
+    "postcss": "^8.5.1",
     "rxjs": "~7.8.0",
-    "tailwindcss": "^4.0.3",
+    "tailwindcss": "^4.0.5",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
@@ -53,14 +54,15 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "prettier": "^3.3.3",
+    "prettier": "^3.5.0",
     "prettier-eslint": "^16.3.0",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "typescript": "~5.7.3",
     "typescript-eslint": "^8.2.0"
   },
   "overrides": {
     "@angular-devkit/build-angular": {
-      "tailwindcss": "^4.0.0"
+      "tailwindcss": "^4.0.5"
     },
     "ng2-konva": {
       "@angular/core": "^19.0.0",
