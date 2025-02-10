@@ -4,6 +4,7 @@ import { heroquestCardsMock } from '../../../core/constants/example-cards';
 
 @Component({
   selector: 'app-card-catalogue-content',
+  standalone: true,
   imports: [CardContainerComponent],
   templateUrl: './content.component.html',
   styleUrl: './content.component.scss',

@@ -5,6 +5,8 @@ import { CardCatalogueTopFiltersComponent } from './top-filters/top-filters.comp
 @Component({
   selector: 'app-card-catalogue',
   imports: [CardCatalogueContentComponent, CardCatalogueTopFiltersComponent],
+  standalone: true,
+
   templateUrl: './card-catalogue.component.html',
   styleUrl: './card-catalogue.component.scss',
 })
