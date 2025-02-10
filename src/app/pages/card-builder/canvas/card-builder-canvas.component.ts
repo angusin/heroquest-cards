@@ -38,6 +38,7 @@ const attributesConfigValue: TextConfig = {
 
 @Component({
   selector: 'app-card-builder-canvas',
+  standalone: true,
   imports: [StageComponent, CoreShapeComponent, FormsModule],
   templateUrl: './card-builder-canvas.component.html',
   styleUrl: './card-builder-canvas.component.scss',

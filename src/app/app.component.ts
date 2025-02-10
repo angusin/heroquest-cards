@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
-import { CardCatalogueComponent } from './pages/card-catalogue/card-catalogue.component';
 import { CommonModule } from '@angular/common';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { initFlowbite } from 'flowbite';
@@ -8,12 +7,7 @@ import { initFlowbite } from 'flowbite';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    CommonModule,
-    NavbarComponent,
-    CardCatalogueComponent,
-    RouterModule,
-  ],
+  imports: [CommonModule, NavbarComponent, RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

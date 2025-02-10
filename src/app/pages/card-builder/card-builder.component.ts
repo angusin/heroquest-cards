@@ -4,6 +4,7 @@ import { CardBuilderFormComponent } from './form/card-builder-form.component';
 
 @Component({
   selector: 'app-card-builder',
+  standalone: true,
   imports: [CardBuilderCanvasComponent, CardBuilderFormComponent],
   templateUrl: './card-builder.component.html',
   styleUrl: './card-builder.component.scss',
