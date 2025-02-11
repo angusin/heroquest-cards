@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, output, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card-builder-form',
@@ -7,9 +7,45 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './card-builder-form.component.scss',
 })
 export class CardBuilderFormComponent {
-  @Output() descriptionInputChange = new EventEmitter<string>();
   @Output() monsterImageUpload = new EventEmitter<HTMLImageElement>();
   @Output() monsterIconUpload = new EventEmitter<HTMLImageElement>();
+  descriptionInputChange = output<string>();
+  monsterNameChange = output<string>();
+  movementSquaresChange = output<number>();
+  attackDiceChange = output<number>();
+  defendDiceChange = output<number>();
+  bodyPointsChange = output<number>();
+  mindPointsChange = output<number>();
+
+  onMonsterNameChange(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    this.monsterNameChange.emit(input.value);
+  }
+
+  onMovementSquaresChange(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    this.movementSquaresChange.emit(+input.value);
+  }
+
+  onDefendDiceChange(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    this.defendDiceChange.emit(+input.value);
+  }
+
+  onMindPointsChange(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    this.mindPointsChange.emit(+input.value);
+  }
+
+  onAttackDiceChange(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    this.attackDiceChange.emit(+input.value);
+  }
+
+  onBodyPointsChange(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    this.bodyPointsChange.emit(+input.value);
+  }
 
   onDescriptionInputChange(event: Event): void {
     const input = event.target as HTMLInputElement;

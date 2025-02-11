@@ -1,64 +1,23 @@
 <form class="">
-  <!-- First Row: Monster Name -->
-  <div class="mb-4">
-    <label for="monster-name" class="mb-2 block text-sm font-medium text-white"
-      >Monster Name</label
-    >
-    <input
-      type="text"
-      id="monster-name"
-      name="monster-name"
-      class="block w-full rounded-lg border border-gray-600 bg-gray-700 p-2.5 text-sm text-white placeholder-gray-400 focus:border-yellow-500 focus:ring-yellow-500"
-      placeholder="Enter monster name" />
-  </div>
-
-  <!-- Second Row: Two Columns -->
   <div class="mb-4 grid grid-cols-2 gap-4">
-    <!-- First Column: Movement, Defend, Mind -->
+    <!-- First Column -->
     <div class="space-y-4">
       <div>
-        <label for="movement" class="mb-2 block text-sm font-medium text-white"
-          >Movement</label
+        <label
+          for="monster-name"
+          class="mb-2 block text-sm font-medium text-white"
+          >Monster Name</label
         >
         <input
-          type="number"
-          id="movement"
-          name="movement"
-          min="1"
-          max="9"
-          value="1"
-          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500" />
+          type="text"
+          id="monster-name"
+          name="monster-name"
+          class="block w-full rounded-lg border border-gray-600 bg-gray-700 p-2.5 text-sm text-white placeholder-gray-400 focus:border-yellow-500 focus:ring-yellow-500"
+          placeholder="Enter monster name"
+          value="Skeleton King"
+          (input)="onMonsterNameChange($event)"
+          (paste)="onMonsterNameChange($event)" />
       </div>
-      <div>
-        <label for="defend" class="mb-2 block text-sm font-medium text-white"
-          >Defend dice</label
-        >
-        <input
-          type="number"
-          id="defend"
-          name="defend"
-          min="1"
-          max="9"
-          value="1"
-          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500" />
-      </div>
-      <div>
-        <label for="mind" class="mb-2 block text-sm font-medium text-white"
-          >Mind</label
-        >
-        <input
-          type="number"
-          id="mind"
-          name="mind"
-          min="1"
-          max="9"
-          value="1"
-          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500" />
-      </div>
-    </div>
-
-    <!-- Second Column: Attack, Body -->
-    <div class="space-y-4">
       <div>
         <label for="attack" class="mb-2 block text-sm font-medium text-white"
           >Attack Dice</label
@@ -69,12 +28,13 @@
           name="attack"
           min="1"
           max="9"
-          value="1"
-          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500" />
+          value="6"
+          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500"
+          (input)="onAttackDiceChange($event)" />
       </div>
       <div>
         <label for="body" class="mb-2 block text-sm font-medium text-white"
-          >Body</label
+          >Body Points</label
         >
         <input
           type="number"
@@ -82,10 +42,71 @@
           name="body"
           min="1"
           max="9"
-          value="1"
-          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500" />
+          value="6"
+          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500"
+          (input)="onBodyPointsChange($event)" />
       </div>
     </div>
+
+    <!-- Second Column -->
+    <div class="space-y-4">
+      <div>
+        <label for="movement" class="mb-2 block text-sm font-medium text-white"
+          >Movement Squares</label
+        >
+        <input
+          type="number"
+          id="movement"
+          name="movement"
+          min="1"
+          max="9"
+          value="8"
+          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500"
+          (input)="onMovementSquaresChange($event)" />
+      </div>
+      <div>
+        <label for="defend" class="mb-2 block text-sm font-medium text-white"
+          >Defend Dice</label
+        >
+        <input
+          type="number"
+          id="defend"
+          name="defend"
+          min="1"
+          max="9"
+          value="6"
+          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500"
+          (input)="onDefendDiceChange($event)" />
+      </div>
+      <div>
+        <label for="mind" class="mb-2 block text-sm font-medium text-white"
+          >Mind Points</label
+        >
+        <input
+          type="number"
+          id="mind"
+          name="mind"
+          min="1"
+          max="9"
+          value="4"
+          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500"
+          (input)="onMindPointsChange($event)" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Monster description -->
+  <div class="mb-4">
+    <label for="description" class="mb-2 block text-sm font-medium text-white"
+      >Description<span class="text-xs text-gray-400"> (Optional)</span></label
+    >
+    <textarea
+      id="description"
+      rows="4"
+      class="block w-full rounded-lg border border-gray-600 bg-gray-700 p-2.5 text-sm text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500"
+      placeholder="Write the monster description..."
+      (input)="onDescriptionInputChange($event)"
+      (paste)="onDescriptionInputChange($event)"></textarea>
   </div>
 
   <!-- Monster main image -->
@@ -116,19 +137,5 @@
       type="file"
       accept="image/png"
       (change)="onMonsterIconUpload($event)" />
-  </div>
-
-  <!-- Monster description -->
-  <div>
-    <label for="description" class="mb-2 block text-sm font-medium text-white"
-      >Description<span class="text-xs text-gray-400"> (Optional)</span></label
-    >
-    <textarea
-      id="description"
-      rows="4"
-      class="block w-full rounded-lg border border-gray-600 bg-gray-700 p-2.5 text-sm text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500"
-      placeholder="Write the monster description..."
-      (input)="onDescriptionInputChange($event)"
-      (paste)="onDescriptionInputChange($event)"></textarea>
   </div>
 </form>

@@ -1,6 +1,8 @@
 import {
   Component,
+  effect,
   ElementRef,
+  input,
   Input,
   OnDestroy,
   OnInit,
@@ -37,12 +39,19 @@ const attributesConfigValue: TextConfig = {
 };
 
 @Component({
-    selector: 'app-card-builder-canvas',
-    imports: [StageComponent, CoreShapeComponent, FormsModule],
-    templateUrl: './card-builder-canvas.component.html',
-    styleUrl: './card-builder-canvas.component.scss'
+  selector: 'app-card-builder-canvas',
+  imports: [StageComponent, CoreShapeComponent, FormsModule],
+  templateUrl: './card-builder-canvas.component.html',
+  styleUrl: './card-builder-canvas.component.scss',
 })
 export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
+  monsterNameInput = input<string>('');
+  movementSquaresInput = input<number>(1);
+  attackDiceInput = input<number>(1);
+  defendDiceInput = input<number>(1);
+  bodyPointsInput = input<number>(1);
+  mindPointsInput = input<number>(1);
+
   @Input() set monsterImage(image: HTMLImageElement) {
     this.onMonsterImageUpload(image);
   }
@@ -70,10 +79,34 @@ export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
   isTransformEnabled = false;
   description = '';
 
-  onKeydown(event: KeyboardEvent): void {
-    if (event.key === 'Escape' || event.key === 'Enter') {
-      this.detachTransformerFromImage();
-    }
+  onKeydown(): void {
+    this.detachTransformerFromImage();
+  }
+
+  constructor() {
+    effect(() => {
+      this.onMonsterNameInputChange(this.monsterNameInput());
+    });
+
+    effect(() => {
+      this.onMovementSquaresInputChange(this.movementSquaresInput());
+    });
+
+    effect(() => {
+      this.onAttackDiceInputChange(this.attackDiceInput());
+    });
+
+    effect(() => {
+      this.onDefendDiceInputInputChange(this.defendDiceInput());
+    });
+
+    effect(() => {
+      this.onBodyPointsInputChange(this.bodyPointsInput());
+    });
+
+    effect(() => {
+      this.onMindPointsInputChange(this.mindPointsInput());
+    });
   }
 
   public configStage: Partial<StageConfig> = {
@@ -200,41 +233,88 @@ export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
   public movementValue: TextConfig = {
     ...attributesConfigValue,
     x: 100,
-    y: this.getStatsTextDisplacement(8),
-    text: '8',
+    y: this.getStatsTextDisplacement(1),
+    text: '1',
   };
 
   public attackValue: TextConfig = {
     ...attributesConfigValue,
     x: 245,
-    y: this.getStatsTextDisplacement(5),
-    text: '5',
+    y: this.getStatsTextDisplacement(1),
+    text: '1',
   };
 
   public defendValue: TextConfig = {
     ...attributesConfigValue,
     x: 362,
-    y: this.getStatsTextDisplacement(4),
-    text: '4',
+    y: this.getStatsTextDisplacement(1),
+    text: '1',
   };
 
   public bodyValue: TextConfig = {
     ...attributesConfigValue,
     x: 477,
-    y: this.getStatsTextDisplacement(6),
-    text: '6',
+    y: this.getStatsTextDisplacement(1),
+    text: '1',
   };
 
   public mindValue: TextConfig = {
     ...attributesConfigValue,
     x: 590,
-    y: this.getStatsTextDisplacement(4),
-    text: '4',
+    y: this.getStatsTextDisplacement(1),
+    text: '1',
   };
 
   async ngOnInit() {
     this.setStartingImages();
     document.addEventListener('keydown', this.onKeydown.bind(this));
+  }
+
+  onMonsterNameInputChange(value: string): void {
+    this.configName = {
+      ...this.configName,
+      text: value,
+    };
+  }
+
+  onMovementSquaresInputChange(value: number): void {
+    this.movementValue = {
+      ...this.movementValue,
+      text: value.toString(),
+      y: this.getStatsTextDisplacement(value),
+    };
+  }
+
+  onAttackDiceInputChange(value: number): void {
+    this.attackValue = {
+      ...this.attackValue,
+      text: value.toString(),
+      y: this.getStatsTextDisplacement(value),
+    };
+  }
+
+  onDefendDiceInputInputChange(value: number): void {
+    this.defendValue = {
+      ...this.defendValue,
+      text: value.toString(),
+      y: this.getStatsTextDisplacement(value),
+    };
+  }
+
+  onBodyPointsInputChange(value: number): void {
+    this.bodyValue = {
+      ...this.bodyValue,
+      text: value.toString(),
+      y: this.getStatsTextDisplacement(value),
+    };
+  }
+
+  onMindPointsInputChange(value: number): void {
+    this.mindValue = {
+      ...this.mindValue,
+      text: value.toString(),
+      y: this.getStatsTextDisplacement(value),
+    };
   }
 
   onDescriptionInputChange(description: string): void {

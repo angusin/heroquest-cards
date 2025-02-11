@@ -3,7 +3,17 @@
     class="mx-auto grid max-w-screen-lg justify-items-center gap-8 md:grid-cols-2">
     <div
       class="mt-0 h-fit w-full rounded-lg border border-gray-700 bg-gray-800 p-6 shadow">
+      <h1 class="text-center text-2xl font-semibold text-white">
+        Monster Card Creator
+      </h1>
+      <div class="mb-4 mt-2 space-y-2 border-t border-gray-700 pt-4"></div>
       <app-card-builder-form
+        (monsterNameChange)="onMonsterNameChange($event)"
+        (movementSquaresChange)="onMovementSquaresChange($event)"
+        (attackDiceChange)="onAttackDiceChangeChange($event)"
+        (defendDiceChange)="onDefendDiceChangeChange($event)"
+        (bodyPointsChange)="onBodyPointsChangeChange($event)"
+        (mindPointsChange)="onMindPointsChangeChange($event)"
         (descriptionInputChange)="onDescriptionInputChange($event)"
         (monsterImageUpload)="onMonsterImageUpload($event)"
         (monsterIconUpload)="onMonsterIconUpload($event)" />
@@ -11,6 +21,12 @@
 
     <div class="w-full overflow-hidden">
       <app-card-builder-canvas
+        [monsterNameInput]="monsterNameInput"
+        [movementSquaresInput]="movementSquaresInput"
+        [attackDiceInput]="attackDiceInput"
+        [defendDiceInput]="defendDiceInput"
+        [bodyPointsInput]="bodyPointsInput"
+        [mindPointsInput]="mindPointsInput"
         [descriptionInput]="descriptionInput"
         [monsterImage]="monsterImage"
         [monsterIcon]="monsterIcon" />
