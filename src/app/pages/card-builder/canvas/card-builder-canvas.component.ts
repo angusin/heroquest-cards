@@ -37,11 +37,10 @@ const attributesConfigValue: TextConfig = {
 };
 
 @Component({
-  selector: 'app-card-builder-canvas',
-  standalone: true,
-  imports: [StageComponent, CoreShapeComponent, FormsModule],
-  templateUrl: './card-builder-canvas.component.html',
-  styleUrl: './card-builder-canvas.component.scss',
+    selector: 'app-card-builder-canvas',
+    imports: [StageComponent, CoreShapeComponent, FormsModule],
+    templateUrl: './card-builder-canvas.component.html',
+    styleUrl: './card-builder-canvas.component.scss'
 })
 export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
   @Input() set monsterImage(image: HTMLImageElement) {

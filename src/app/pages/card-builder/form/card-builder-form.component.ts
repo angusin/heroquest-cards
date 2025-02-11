@@ -3,7 +3,6 @@ import { Component, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'app-card-builder-form',
   imports: [],
-  standalone: true,
   templateUrl: './card-builder-form.component.html',
   styleUrl: './card-builder-form.component.scss',
 })

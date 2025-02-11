@@ -3,11 +3,10 @@ import { CardBuilderCanvasComponent } from './canvas/card-builder-canvas.compone
 import { CardBuilderFormComponent } from './form/card-builder-form.component';
 
 @Component({
-  selector: 'app-card-builder',
-  standalone: true,
-  imports: [CardBuilderCanvasComponent, CardBuilderFormComponent],
-  templateUrl: './card-builder.component.html',
-  styleUrl: './card-builder.component.scss',
+    selector: 'app-card-builder',
+    imports: [CardBuilderCanvasComponent, CardBuilderFormComponent],
+    templateUrl: './card-builder.component.html',
+    styleUrl: './card-builder.component.scss'
 })
 export class CardBuilderComponent {
   descriptionInput = '';

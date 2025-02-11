@@ -7,11 +7,10 @@ import { CardTypeTagComponent } from '../../components/shared/card-type-tag/card
 import { FavoriteButtonComponent } from '../../components/shared/favorite-button/favorite-button.component';
 
 @Component({
-  selector: 'app-card-detail',
-  standalone: true,
-  imports: [NgOptimizedImage, CardTypeTagComponent, FavoriteButtonComponent],
-  templateUrl: './card-detail.component.html',
-  styleUrl: './card-detail.component.scss',
+    selector: 'app-card-detail',
+    imports: [NgOptimizedImage, CardTypeTagComponent, FavoriteButtonComponent],
+    templateUrl: './card-detail.component.html',
+    styleUrl: './card-detail.component.scss'
 })
 export class CardDetailComponent implements OnInit {
   cards = heroquestCardsMock;
