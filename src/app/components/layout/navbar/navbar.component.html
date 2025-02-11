@@ -1,5 +1,5 @@
 <div
-  class="fixed start-0 top-0 z-20 h-16 w-full border-b border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
+  class="fixed start-0 top-0 z-20 h-16 w-full border-b border-gray-700 bg-gray-800">
   <nav class="mx-auto max-w-screen-2xl px-4 py-2.5 md:px-8">
     <div class="flex flex-wrap items-center justify-between">
       <div class="flex items-center justify-start">
@@ -7,11 +7,11 @@
         <a href="/" class="mr-4 flex items-center justify-between">
           <img [src]="'assets/hq_logo.png'" width="40" alt="" />
           <span
-            class="ml-3 block self-center whitespace-nowrap text-2xl font-semibold dark:text-white sm:hidden">
+            class="ml-3 block self-center whitespace-nowrap text-2xl font-semibold text-white sm:hidden">
             HQ Cards
           </span>
           <span
-            class="ml-3 hidden self-center whitespace-nowrap text-2xl font-semibold dark:text-white sm:block">
+            class="ml-3 hidden self-center whitespace-nowrap text-2xl font-semibold text-white sm:block">
             HeroQuest Cards
           </span>
         </a>
@@ -21,7 +21,7 @@
         <button
           [routerLink]="['/builder']"
           type="button"
-          class="me-2 mr-2 hidden cursor-pointer items-center rounded-lg bg-yellow-600 py-2.5 pl-2.5 pr-4 text-center text-sm font-medium text-white hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 dark:focus:ring-yellow-900 sm:flex">
+          class="me-2 mr-2 hidden cursor-pointer items-center rounded-lg bg-yellow-600 py-2.5 pl-2.5 pr-4 text-center text-sm font-medium text-white hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-900 sm:flex">
           <svg
             class="mr-1 h-5 w-5 text-white"
             aria-hidden="true"
@@ -43,7 +43,7 @@
         <!-- USER MENU BUTTON -->
         <button
           type="button"
-          class="mx-3 flex cursor-pointer rounded-full bg-gray-800 text-sm focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 md:mr-0"
+          class="mx-3 flex cursor-pointer rounded-full bg-gray-800 text-sm focus:ring-4 focus:ring-gray-600 md:mr-0"
           id="user-menu-button"
           aria-expanded="false"
           data-dropdown-toggle="dropdown">
@@ -56,42 +56,37 @@
 
         <!-- USER DROPDOWN -->
         <div
-          class="z-50 my-4 hidden w-56 list-none divide-y divide-gray-100 rounded bg-white text-base shadow dark:divide-gray-600 dark:bg-gray-700"
+          class="z-50 my-4 hidden w-56 list-none divide-y divide-gray-600 rounded bg-gray-700 text-base shadow"
           id="dropdown">
           <div class="px-4 py-3">
-            <span
-              class="block text-sm font-semibold text-gray-900 dark:text-white"
+            <span class="block text-sm font-semibold text-white"
               >Neil Sims</span
             >
-            <span class="block truncate text-sm text-gray-900 dark:text-white"
+            <span class="block truncate text-sm text-white"
               >'name arroba flowbite.com'</span
             >
           </div>
-          <ul
-            class="py-1 text-gray-700 dark:text-gray-300"
-            aria-labelledby="dropdown">
+          <ul class="py-1 text-gray-300" aria-labelledby="dropdown">
             <li>
               <a
                 href="#"
-                class="block px-4 py-2 text-sm hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                class="block px-4 py-2 text-sm text-gray-400 hover:bg-gray-600 hover:text-white"
                 >My profile</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="block px-4 py-2 text-sm hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                class="block px-4 py-2 text-sm text-gray-400 hover:bg-gray-600 hover:text-white"
                 >Account settings</a
               >
             </li>
           </ul>
-          <ul
-            class="py-1 text-gray-700 dark:text-gray-300"
-            aria-labelledby="dropdown">
+          <ul class="py-1 text-gray-300" aria-labelledby="dropdown">
             <li>
               <a
                 href="#"
-                class="flex items-center px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                class="flex items-center px-4 py-2 text-sm hover:bg-gray-600 hover:text-white"
                 ><svg
                   class="mr-2 h-5 w-5 text-gray-400"
                   fill="currentColor"
@@ -108,7 +103,7 @@
             <li>
               <a
                 href="#"
-                class="flex items-center px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                class="flex items-center px-4 py-2 text-sm hover:bg-gray-600 hover:text-white"
                 ><svg
                   class="mr-2 h-5 w-5 text-gray-400"
                   fill="currentColor"
@@ -123,11 +118,11 @@
             <li>
               <a
                 href="#"
-                class="flex items-center justify-between px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                class="flex items-center justify-between px-4 py-2 text-sm hover:bg-gray-600 hover:text-white">
                 <span class="flex items-center">
                   <svg
                     aria-hidden="true"
-                    class="text-primary-600 dark:text-primary-500 mr-2 h-5 w-5"
+                    class="text-primary-500 mr-2 h-5 w-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
@@ -152,13 +147,11 @@
               </a>
             </li>
           </ul>
-          <ul
-            class="py-1 text-gray-700 dark:text-gray-300"
-            aria-labelledby="dropdown">
+          <ul class="py-1 text-gray-300" aria-labelledby="dropdown">
             <li>
               <a
                 href="#"
-                class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                class="block px-4 py-2 text-sm hover:bg-gray-600 hover:text-white"
                 >Sign out</a
               >
             </li>

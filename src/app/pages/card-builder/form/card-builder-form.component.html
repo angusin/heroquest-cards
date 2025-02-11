@@ -1,27 +1,23 @@
 <form class="">
   <!-- First Row: Monster Name -->
   <div class="mb-4">
-    <label
-      for="monster-name"
-      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+    <label for="monster-name" class="mb-2 block text-sm font-medium text-white"
       >Monster Name</label
     >
     <input
       type="text"
       id="monster-name"
       name="monster-name"
-      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-500 dark:focus:border-yellow-500"
+      class="block w-full rounded-lg border border-gray-600 bg-gray-700 p-2.5 text-sm text-white placeholder-gray-400 focus:border-yellow-500 focus:ring-yellow-500"
       placeholder="Enter monster name" />
   </div>
 
   <!-- Second Row: Two Columns -->
-  <div class="grid grid-cols-2 gap-4 mb-4">
+  <div class="mb-4 grid grid-cols-2 gap-4">
     <!-- First Column: Movement, Defend, Mind -->
     <div class="space-y-4">
       <div>
-        <label
-          for="movement"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        <label for="movement" class="mb-2 block text-sm font-medium text-white"
           >Movement</label
         >
         <input
@@ -31,12 +27,10 @@
           min="1"
           max="9"
           value="1"
-          class="text-gray-900 dark:text-white mt-1 block w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:border-blue-500 focus:ring-blue-500 p-2" />
+          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500" />
       </div>
       <div>
-        <label
-          for="defend"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        <label for="defend" class="mb-2 block text-sm font-medium text-white"
           >Defend dice</label
         >
         <input
@@ -46,12 +40,10 @@
           min="1"
           max="9"
           value="1"
-          class="text-gray-900 dark:text-white mt-1 block w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:border-blue-500 focus:ring-blue-500 p-2" />
+          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500" />
       </div>
       <div>
-        <label
-          for="mind"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        <label for="mind" class="mb-2 block text-sm font-medium text-white"
           >Mind</label
         >
         <input
@@ -61,16 +53,14 @@
           min="1"
           max="9"
           value="1"
-          class="text-gray-900 dark:text-white mt-1 block w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:border-blue-500 focus:ring-blue-500 p-2" />
+          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500" />
       </div>
     </div>
 
     <!-- Second Column: Attack, Body -->
     <div class="space-y-4">
       <div>
-        <label
-          for="attack"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        <label for="attack" class="mb-2 block text-sm font-medium text-white"
           >Attack Dice</label
         >
         <input
@@ -80,12 +70,10 @@
           min="1"
           max="9"
           value="1"
-          class="text-gray-900 dark:text-white mt-1 block w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:border-blue-500 focus:ring-blue-500 p-2" />
+          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500" />
       </div>
       <div>
-        <label
-          for="body"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        <label for="body" class="mb-2 block text-sm font-medium text-white"
           >Body</label
         >
         <input
@@ -95,23 +83,21 @@
           min="1"
           max="9"
           value="1"
-          class="text-gray-900 dark:text-white mt-1 block w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:border-blue-500 focus:ring-blue-500 p-2" />
+          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500" />
       </div>
     </div>
   </div>
 
   <!-- Monster main image -->
   <div class="mb-4">
-    <label
-      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-      for="monster_image"
-      >Monster image<span class="text-xs text-gray-600 dark:text-gray-400">
+    <label class="mb-2 block text-sm font-medium text-white" for="monster_image"
+      >Monster image<span class="text-xs text-gray-400">
         (.PNG image with transparent background)</span
       >
     </label>
     <input
       id="monster_image"
-      class="w-full border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-400 font-medium text-sm bg-gray-50 dark:bg-gray-700 file:cursor-pointer cursor-pointer file:border-0 file:py-2 file:px-4 file:mr-4 file:bg-gray-600 file:hover:bg-gray-700 file:text-white rounded-lg"
+      class="w-full cursor-pointer rounded-lg border border-gray-600 bg-gray-700 text-sm font-medium text-gray-400 file:mr-4 file:cursor-pointer file:border-0 file:bg-gray-600 file:px-4 file:py-2 file:text-white file:hover:bg-gray-700"
       type="file"
       accept="image/png"
       (change)="onMonsterImageUpload($event)" />
@@ -119,16 +105,14 @@
 
   <!-- Monster icon image -->
   <div class="mb-4">
-    <label
-      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-      for="monster_image"
-      >Monster icon<span class="text-xs text-gray-600 dark:text-gray-400">
+    <label class="mb-2 block text-sm font-medium text-white" for="monster_image"
+      >Monster icon<span class="text-xs text-gray-400">
         (.PNG image with transparent background)</span
       ></label
     >
     <input
       id="monster_image"
-      class="w-full border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-400 font-medium text-sm bg-gray-50 dark:bg-gray-700 file:cursor-pointer cursor-pointer file:border-0 file:py-2 file:px-4 file:mr-4 file:bg-gray-600 file:hover:bg-gray-700 file:text-white rounded-lg"
+      class="w-full cursor-pointer rounded-lg border border-gray-600 bg-gray-700 text-sm font-medium text-gray-400 file:mr-4 file:cursor-pointer file:border-0 file:bg-gray-600 file:px-4 file:py-2 file:text-white file:hover:bg-gray-700"
       type="file"
       accept="image/png"
       (change)="onMonsterIconUpload($event)" />
@@ -136,17 +120,13 @@
 
   <!-- Monster description -->
   <div>
-    <label
-      for="description"
-      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-      >Description<span class="text-xs text-gray-600 dark:text-gray-400">
-        (Optional)</span
-      ></label
+    <label for="description" class="mb-2 block text-sm font-medium text-white"
+      >Description<span class="text-xs text-gray-400"> (Optional)</span></label
     >
     <textarea
       id="description"
       rows="4"
-      class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      class="block w-full rounded-lg border border-gray-600 bg-gray-700 p-2.5 text-sm text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500"
       placeholder="Write the monster description..."
       (input)="onDescriptionInputChange($event)"
       (paste)="onDescriptionInputChange($event)"></textarea>
