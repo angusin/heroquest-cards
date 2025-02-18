@@ -6,7 +6,7 @@
       <h1 class="text-center text-2xl font-semibold text-white">
         Monster Card Creator
       </h1>
-      <div class="mb-4 mt-2 space-y-2 border-t border-gray-700 pt-4"></div>
+      <div class="mb-4 mt-2 space-y-2 border-t border-gray-700"></div>
       <app-card-builder-form
         (monsterNameChange)="onMonsterNameChange($event)"
         (movementSquaresChange)="onMovementSquaresChange($event)"
@@ -17,6 +17,66 @@
         (descriptionInputChange)="onDescriptionInputChange($event)"
         (monsterImageUpload)="onMonsterImageUpload($event)"
         (monsterIconUpload)="onMonsterIconUpload($event)" />
+      <div class="my-4 space-y-2 border-t border-gray-700"></div>
+      <div class="flex justify-end">
+        <button
+          type="button"
+          class="me-2 mr-2 hidden cursor-pointer items-center rounded-lg bg-yellow-600 py-2.5 pl-2.5 pr-4 text-center text-sm font-medium text-white hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-900 sm:flex">
+          <svg
+            class="mr-1 h-5 w-5 text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4" />
+          </svg>
+
+          Download card
+        </button>
+        <button
+          data-popover-target="popover-default"
+          type="button"
+          class="hidden cursor-pointer items-center rounded-lg bg-yellow-600 py-2.5 pl-2.5 pr-4 text-center text-sm font-medium text-white hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-900 sm:flex">
+          <svg
+            class="mr-1 h-5 w-5 text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              fill-rule="evenodd"
+              d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7.414A2 2 0 0 0 20.414 6L18 3.586A2 2 0 0 0 16.586 3H5Zm10 11a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7V5h8v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1Z"
+              clip-rule="evenodd" />
+          </svg>
+
+          Save to collection
+        </button>
+        <div
+          data-popover
+          id="popover-default"
+          role="tooltip"
+          class="shadow-xs invisible absolute z-10 inline-block w-64 rounded-lg border border-gray-200 bg-white text-sm text-gray-500 opacity-0 transition-opacity duration-300 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400">
+          <div
+            class="rounded-t-lg border-b border-gray-200 bg-gray-100 px-3 py-2 dark:border-gray-600 dark:bg-gray-700">
+            <h3 class="font-semibold text-gray-900 dark:text-white">
+              Not yet available
+            </h3>
+          </div>
+          <div class="px-3 py-2">
+            <p>The saving feature will be implemented in a future release.</p>
+          </div>
+          <div data-popper-arrow></div>
+        </div>
+      </div>
     </div>
 
     <div class="w-full overflow-hidden">
