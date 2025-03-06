@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { CardBuilderCanvasComponent } from './canvas/card-builder-canvas.component';
 import { CardBuilderFormComponent } from './form/card-builder-form.component';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-card-builder',
@@ -18,6 +19,11 @@ export class CardBuilderComponent {
   descriptionInput = '';
   monsterImage!: HTMLImageElement;
   monsterIcon!: HTMLImageElement;
+  isBrowser = false;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: object) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+  }
 
   onMonsterNameChange(value: string): void {
     this.monsterNameInput = value;

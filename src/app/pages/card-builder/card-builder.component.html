@@ -81,16 +81,18 @@
     </div>
 
     <div class="w-full overflow-hidden">
-      <app-card-builder-canvas
-        [monsterNameInput]="monsterNameInput"
-        [movementSquaresInput]="movementSquaresInput"
-        [attackDiceInput]="attackDiceInput"
-        [defendDiceInput]="defendDiceInput"
-        [bodyPointsInput]="bodyPointsInput"
-        [mindPointsInput]="mindPointsInput"
-        [descriptionInput]="descriptionInput"
-        [monsterImage]="monsterImage"
-        [monsterIcon]="monsterIcon" />
+      @if (isBrowser) {
+        <app-card-builder-canvas
+          [monsterNameInput]="monsterNameInput"
+          [movementSquaresInput]="movementSquaresInput"
+          [attackDiceInput]="attackDiceInput"
+          [defendDiceInput]="defendDiceInput"
+          [bodyPointsInput]="bodyPointsInput"
+          [mindPointsInput]="mindPointsInput"
+          [descriptionInput]="descriptionInput"
+          [monsterImage]="monsterImage"
+          [monsterIcon]="monsterIcon" />
+      }
     </div>
   </div>
 </section>
