@@ -20,6 +20,7 @@
       <div class="my-4 space-y-2 border-t border-gray-700"></div>
       <div class="flex justify-end">
         <button
+          (click)="onDownloadCard()"
           type="button"
           class="me-2 mr-2 hidden cursor-pointer items-center rounded-lg bg-yellow-600 py-2.5 pl-2.5 pr-4 text-center text-sm font-medium text-white hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-900 sm:flex">
           <svg
@@ -80,7 +81,7 @@
       </div>
     </div>
 
-    <div class="w-full overflow-hidden">
+    <div class="stage-parent w-full overflow-hidden">
       @if (isBrowser) {
         <app-card-builder-canvas
           [monsterNameInput]="monsterNameInput"

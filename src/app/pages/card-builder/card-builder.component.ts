@@ -1,4 +1,4 @@
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { CardBuilderCanvasComponent } from './canvas/card-builder-canvas.component';
 import { CardBuilderFormComponent } from './form/card-builder-form.component';
 import { isPlatformBrowser } from '@angular/common';
@@ -10,6 +10,8 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrl: './card-builder.component.scss',
 })
 export class CardBuilderComponent {
+  @ViewChild(CardBuilderCanvasComponent)
+  cardCanvas!: CardBuilderCanvasComponent;
   monsterNameInput = 'Skeleton King';
   movementSquaresInput = 8;
   attackDiceInput = 6;
@@ -59,5 +61,13 @@ export class CardBuilderComponent {
 
   onMonsterIconUpload(icon: HTMLImageElement): void {
     this.monsterIcon = icon;
+  }
+
+  onDownloadCard() {
+    const dataURL = this.cardCanvas.getCanvasDataURL();
+    const link = document.createElement('a');
+    link.href = dataURL;
+    link.download = 'card.png';
+    link.click();
   }
 }

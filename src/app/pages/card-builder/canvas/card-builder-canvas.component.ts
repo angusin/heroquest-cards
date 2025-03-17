@@ -1,7 +1,7 @@
 import {
   Component,
   effect,
-  ElementRef,
+  HostListener,
   input,
   Input,
   OnDestroy,
@@ -64,7 +64,7 @@ export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
     this.onDescriptionInputChange(description);
   }
 
-  @ViewChild('stage', { static: false }) stage!: ElementRef;
+  @ViewChild(StageComponent) stageComponent!: StageComponent;
   @ViewChild('monsterMovableImage', { static: false })
   monsterMovableImage!: CoreShapeComponent;
   @ViewChild('layer') layer!: CoreShapeComponent;
@@ -84,6 +84,9 @@ export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
   }
 
   constructor() {
+    // Resize stage when window is resized
+    this.fitStageIntoParentContainer();
+
     effect(() => {
       this.onMonsterNameInputChange(this.monsterNameInput());
     });
@@ -109,10 +112,29 @@ export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
     });
   }
 
+  @HostListener('window:resize')
+  fitStageIntoParentContainer() {
+    const container = document.querySelector('.stage-parent') as HTMLElement;
+    if (!container) return;
+
+    const containerWidth = container.offsetWidth;
+    const scale = containerWidth / CANVAS_WIDTH;
+
+    this.configStage = {
+      ...this.configStage,
+      width: CANVAS_WIDTH * scale,
+      height: CANVAS_HEIGHT * scale,
+      scale: { x: scale, y: scale },
+    };
+
+    if (this.configBgImage?.image) {
+      this.updateBackgroundConfig(this.configBgImage.image as HTMLImageElement);
+    }
+  }
+
   public configStage: Partial<StageConfig> = {
     width: CANVAS_WIDTH,
     height: CANVAS_HEIGHT,
-    scale: { x: 0.62, y: 0.62 },
   };
 
   public layerConfig: LayerConfig = {
@@ -437,13 +459,7 @@ export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
     attributesBoxImage.src = 'assets/card-monster/attributes-box.webp';
 
     backgroundImg.onload = () => {
-      this.configBgImage = {
-        image: backgroundImg,
-        width: this.configStage.width,
-        height: this.configStage.height,
-        x: 0,
-        y: 0,
-      };
+      this.updateBackgroundConfig(backgroundImg);
     };
 
     attributesBoxImage.onload = () => {
@@ -455,6 +471,19 @@ export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
     };
   }
 
+  updateBackgroundConfig(image: HTMLImageElement) {
+    const scaleX = this.configStage.scale?.x || 1;
+    const scaleY = this.configStage.scale?.y || 1;
+
+    this.configBgImage = {
+      image,
+      width: (this.configStage?.width ?? CANVAS_WIDTH) / scaleX, // Compensate for stage scale
+      height: (this.configStage?.height ?? CANVAS_HEIGHT) / scaleY, // Compensate for stage scale
+      x: 0,
+      y: 0,
+    };
+  }
+
   getStatsTextDisplacement(stat: number): number {
     if (stat === 6 || stat === 8) {
       return 921;
@@ -463,6 +492,16 @@ export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
     } else {
       return 912;
     }
+  }
+
+  getCanvasDataURL(): string {
+    const konvaStage = this.stageComponent.getStage(); // Access Konva Stage using getStage()
+    return konvaStage
+      ? konvaStage.toDataURL({
+          pixelRatio: 1,
+          mimeType: 'image/png',
+        })
+      : '';
   }
 
   ngOnDestroy(): void {
