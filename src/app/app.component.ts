@@ -5,10 +5,10 @@ import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { initFlowbite } from 'flowbite';
 
 @Component({
-    selector: 'app-root',
-    imports: [CommonModule, NavbarComponent, RouterModule],
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.scss'
+  selector: 'app-root',
+  imports: [CommonModule, NavbarComponent, RouterModule],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
   constructor(private router: Router) {}

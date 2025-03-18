@@ -4,9 +4,9 @@ import {
   HostListener,
   input,
   Input,
-  OnDestroy,
-  OnInit,
   ViewChild,
+  OnInit,
+  OnDestroy,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { LayerConfig } from 'konva/lib/Layer';
@@ -288,7 +288,7 @@ export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
     text: '1',
   };
 
-  async ngOnInit() {
+  ngOnInit() {
     this.setStartingImages();
     document.addEventListener('keydown', this.onKeydown.bind(this));
   }
