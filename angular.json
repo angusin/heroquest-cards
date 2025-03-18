@@ -31,7 +31,8 @@
             ],
             "styles": ["src/styles.scss"],
             "scripts": [],
-            "prerender": false
+            "prerender": false,
+            "allowedCommonJsDependencies": ["konva"]
           },
           "configurations": {
             "production": {
