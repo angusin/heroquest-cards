@@ -4,11 +4,12 @@ import {
   HostListener,
   input,
   Input,
-  ViewChild,
-  OnInit,
   OnDestroy,
+  OnInit,
+  ViewChild,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import Konva from 'konva';
 import { LayerConfig } from 'konva/lib/Layer';
 import { StageConfig } from 'konva/lib/Stage';
 import { ImageConfig } from 'konva/lib/shapes/Image';
@@ -17,12 +18,11 @@ import { TextConfig } from 'konva/lib/shapes/Text';
 import { TransformerConfig } from 'konva/lib/shapes/Transformer';
 import { CoreShapeComponent, StageComponent } from 'ng2-konva';
 import { CANVAS_HEIGHT, CANVAS_WIDTH, TEXT_LINE_HEIGHT } from '../constants';
-import Konva from 'konva';
 
 const attributesConfigTitle: TextConfig = {
   y: 854,
   width: 140,
-  fontFamily: 'CarterSansW01-Bold',
+  fontFamily: 'CarterSansW01-Bd',
   fontSize: 27,
   align: 'center',
   verticalAlign: 'middle',
@@ -32,7 +32,7 @@ const attributesConfigTitle: TextConfig = {
 
 const attributesConfigValue: TextConfig = {
   width: 140,
-  fontFamily: 'CarterSansW01-Bold',
+  fontFamily: 'CarterSansW01-Bd',
   fontSize: 62,
   align: 'center',
   verticalAlign: 'middle',
@@ -66,8 +66,7 @@ export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
   }
 
   @ViewChild(StageComponent) stageComponent!: StageComponent;
-  @ViewChild('monsterMovableImage', { static: false })
-  monsterMovableImage!: CoreShapeComponent;
+  @ViewChild('monsterMovableImage') monsterMovableImage!: CoreShapeComponent;
   @ViewChild('layer') layer!: CoreShapeComponent;
   @ViewChild('dragLayer') dragLayer!: CoreShapeComponent;
   @ViewChild('descriptionBox') descriptionBox!: CoreShapeComponent;
@@ -79,6 +78,7 @@ export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
   configMonsterIcon!: ImageConfig;
   isTransformEnabled = false;
   description = '';
+  fontsLoaded = false;
 
   onKeydown(): void {
     this.detachTransformerFromImage();
@@ -111,6 +111,12 @@ export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
     effect(() => {
       this.onMindPointsInputChange(this.mindPointsInput());
     });
+  }
+
+  ngOnInit() {
+    this.loadFonts();
+    this.setStartingImages();
+    document.addEventListener('keydown', this.onKeydown.bind(this));
   }
 
   @HostListener('window:resize')
@@ -201,7 +207,7 @@ export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
     y: 90,
     width: this.configStage.width,
     fontSize: 52,
-    fontFamily: 'CarterSansW01-Bold',
+    fontFamily: 'CarterSansW01-Bd',
     preventDefault: false,
     align: 'center',
     text: 'Frozen Horror',
@@ -213,7 +219,7 @@ export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
     x: 80,
     y: 1017,
     width: 640,
-    fontFamily: 'CarterSansW01-Bold',
+    fontFamily: 'CarterSansW01-Bd',
     fontSize: 27,
     text: '',
     verticalAlign: 'bottom',
@@ -288,11 +294,6 @@ export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
     text: '1',
   };
 
-  ngOnInit() {
-    this.setStartingImages();
-    document.addEventListener('keydown', this.onKeydown.bind(this));
-  }
-
   onMonsterNameInputChange(value: string): void {
     this.configName = {
       ...this.configName,
@@ -353,6 +354,19 @@ export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
       this.displaceStatsBox();
       this.displaceMonsterIcon();
     }
+  }
+
+  loadFonts(): void {
+    document.fonts.ready.then(() => {
+      document.fonts
+        .load('1rem CarterSansW01-Bd')
+        .then(() => {
+          this.fontsLoaded = true;
+        })
+        .catch(err => {
+          console.error('Failed to load font:', err);
+        });
+    });
   }
 
   resizeDescriptionBox() {
