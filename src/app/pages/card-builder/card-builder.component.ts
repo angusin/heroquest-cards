@@ -67,7 +67,7 @@ export class CardBuilderComponent {
     const dataURL = this.cardCanvas.getCanvasDataURL();
     const link = document.createElement('a');
     link.href = dataURL;
-    link.download = 'card.png';
+    link.download = `HQ_MONS_${this.monsterNameInput.replace(/\s+/g, '_').toLowerCase()}.png`;
     link.click();
   }
 }

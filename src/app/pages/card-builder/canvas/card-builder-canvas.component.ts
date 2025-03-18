@@ -17,6 +17,7 @@ import { TextConfig } from 'konva/lib/shapes/Text';
 import { TransformerConfig } from 'konva/lib/shapes/Transformer';
 import { CoreShapeComponent, StageComponent } from 'ng2-konva';
 import { CANVAS_HEIGHT, CANVAS_WIDTH, TEXT_LINE_HEIGHT } from '../constants';
+import Konva from 'konva';
 
 const attributesConfigTitle: TextConfig = {
   y: 854,
@@ -494,14 +495,29 @@ export class CardBuilderCanvasComponent implements OnInit, OnDestroy {
     }
   }
 
-  getCanvasDataURL(): string {
-    const konvaStage = this.stageComponent.getStage(); // Access Konva Stage using getStage()
-    return konvaStage
-      ? konvaStage.toDataURL({
-          pixelRatio: 1,
-          mimeType: 'image/png',
-        })
-      : '';
+  getCanvasDataURL() {
+    // Create a copy of the stage with a higher resolution
+    const highResStage = new Konva.Stage({
+      container: document.createElement('div'), // Off-screen container
+      width: CANVAS_WIDTH,
+      height: CANVAS_HEIGHT,
+    });
+
+    this.stageComponent.getStage().children.forEach(layer => {
+      const clonedLayer = layer.clone();
+      highResStage.add(clonedLayer);
+      clonedLayer.draw();
+    });
+
+    const dataURL = highResStage.toDataURL({
+      pixelRatio: 1,
+      mimeType: 'image/png',
+    });
+
+    // Removes all layers, shapes, and memory usage
+    highResStage.destroy();
+
+    return dataURL;
   }
 
   ngOnDestroy(): void {
