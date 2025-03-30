@@ -1,18 +1,6 @@
 <footer class="border-t border-gray-700 bg-gray-800 py-8 text-white">
   <div class="container mx-auto px-4">
     <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-      <!-- About Section -->
-      <div>
-        <h3 class="mb-4 text-lg font-semibold">About HeroQuest Cards</h3>
-        <p class="text-gray-400">
-          A digital companion for your HeroQuest adventures, helping you
-          creating, managing, organizing your cards.
-        </p>
-        <p class="mt-2 text-gray-400">
-          You can also find new cards created by the community.
-        </p>
-      </div>
-
       <!-- Quick Links -->
       <div>
         <h3 class="mb-4 text-lg font-semibold">Quick Links</h3>
@@ -33,9 +21,44 @@
           </li>
           <li>
             <a
+              href="/builder"
+              class="cursor-pointer text-gray-400 transition-colors hover:text-white"
+              >Create your own card</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Information -->
+      <div>
+        <h3 class="mb-4 text-lg font-semibold">Information</h3>
+        <ul class="space-y-2">
+          <li>
+            <a
               href="/about"
               class="cursor-pointer text-gray-400 transition-colors hover:text-white"
               >About HeroQuest Cards</a
+            >
+          </li>
+          <li>
+            <a
+              href="/pricing"
+              class="cursor-pointer text-gray-400 transition-colors hover:text-white"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a
+              href="/privacy"
+              class="cursor-pointer text-gray-400 transition-colors hover:text-white"
+              >Privacy Policy</a
+            >
+          </li>
+          <li>
+            <a
+              href="/tos"
+              class="cursor-pointer text-gray-400 transition-colors hover:text-white"
+              >Terms of Service</a
             >
           </li>
         </ul>
@@ -44,19 +67,27 @@
       <!-- Contact -->
       <div>
         <h3 class="mb-4 text-lg font-semibold">Contact</h3>
-        <p class="text-gray-400">
-          Have questions or suggestions? We'd love to hear from you!
-        </p>
+        <p class="text-gray-400">We'd love to hear your suggestions!</p>
         <a
-          href="mailto:contact@heroquestcards.com"
-          class="cursor-pointer text-gray-400 transition-colors hover:text-white">
-          contact&#64;heroquestcards.com
-        </a>
+          href="mailto:contact&#64;heroquestcards.com"
+          class="text-blue-400 hover:text-blue-300">
+          contact&#64;heroquestcards.com</a
+        >
+
+        <a href="https://ko-fi.com/angusin" target="_blank"
+          ><img
+            height="36"
+            style="border: 0px; height: 36px"
+            src="https://storage.ko-fi.com/cdn/kofi2.png?v=6"
+            border="0"
+            alt="Buy Me a Coffee at ko-fi.com"
+            class="mt-4"
+        /></a>
       </div>
     </div>
 
     <!-- Copyright -->
-    <div class="mt-8 border-t border-gray-700 pt-8 text-center text-gray-300">
+    <div class="mt-6 border-t border-gray-700 pt-6 text-center text-gray-300">
       <p>&copy; {{ currentYear }} HeroQuest Cards. All rights reserved.</p>
     </div>
   </div>

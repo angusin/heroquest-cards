@@ -23,6 +23,34 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'about',
+    loadComponent: () =>
+      import('./pages/info-about/info-about.component').then(
+        m => m.InfoAboutComponent
+      ),
+  },
+  {
+    path: 'privacy',
+    loadComponent: () =>
+      import('./pages/info-privacy/info-privacy.component').then(
+        m => m.InfoPrivacyComponent
+      ),
+  },
+  {
+    path: 'tos',
+    loadComponent: () =>
+      import('./pages/info-tos/info-tos.component').then(
+        m => m.InfoTosComponent
+      ),
+  },
+  {
+    path: 'pricing',
+    loadComponent: () =>
+      import('./pages/info-pricing/pricing.component').then(
+        m => m.PricingComponent
+      ),
+  },
+  {
     path: '**', // Wildcard route for a 404 page
     redirectTo: 'catalogue',
   },
