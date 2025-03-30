@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.3.0](https://github.com/angusin/heroquest-cards/compare/v1.2.0...v1.3.0) (2025-03-30)
+
+
+### Features
+
+* add buttons to save and download ([a34145e](https://github.com/angusin/heroquest-cards/commit/a34145e526834ea47bee8af13d50da83c8340b6f))
+* add filters on top ([73dd222](https://github.com/angusin/heroquest-cards/commit/73dd2225f377ea53b6bf911e90ae97ca49c34d9a))
+* add footer ([5b6d6c3](https://github.com/angusin/heroquest-cards/commit/5b6d6c3f7a58e4961f9c9c63da062401c4ab74e9))
+* add new brown palettes and disable button ([260bfed](https://github.com/angusin/heroquest-cards/commit/260bfed2b48f026c945ebd4df7053380f49023cf))
+* avoid ssr in canvas ([32c7d14](https://github.com/angusin/heroquest-cards/commit/32c7d14a6afc22858b7046dff3afe3c146b1f593))
+* **CORE:** export card in full resolution ([6349887](https://github.com/angusin/heroquest-cards/commit/63498874604ca541094d316d386db3e887de2650))
+* download card and resize canvas ([6ed548b](https://github.com/angusin/heroquest-cards/commit/6ed548b84aab4f577f020191cfa179a1a41c1b66))
+* finish card basic inputs ([53b084c](https://github.com/angusin/heroquest-cards/commit/53b084c3d8bf6dbcfc5c8f2fee6f7eb39f1b64ea))
+* first commit monster card ([c40d86c](https://github.com/angusin/heroquest-cards/commit/c40d86c774b971aa2fbe09a34807e33e91663175))
+* load fonts correctly ([d2fd73b](https://github.com/angusin/heroquest-cards/commit/d2fd73bdfde72613a99565b9a62daa42530f6786))
+
+
+### Bug Fixes
+
+* add override for angular 19 and ng2konva ([0f370c2](https://github.com/angusin/heroquest-cards/commit/0f370c29080a0dc194f1c6ec99b0645b1446ab02))
+* search input correct type ([7ec9271](https://github.com/angusin/heroquest-cards/commit/7ec9271ecc9a437883082730c46b39b8d684e806))
+
 ## [1.2.0](https://github.com/angusin/heroquest-cards/compare/v1.1.0...v1.2.0) (2024-10-25)
 
 
