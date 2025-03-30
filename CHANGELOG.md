@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/angusin/heroquest-cards/compare/v1.4.0...v1.5.0) (2025-03-30)
+
+
+### Features
+
+* change release please type to node ([eaa2a3c](https://github.com/angusin/heroquest-cards/commit/eaa2a3c49c435cd5523c65f6ef9f865024643774))
+
 ## [1.4.0](https://github.com/angusin/heroquest-cards/compare/v1.3.0...v1.4.0) (2025-03-30)
 
 
