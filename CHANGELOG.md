@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/angusin/heroquest-cards/compare/v1.3.0...v1.4.0) (2025-03-30)
+
+
+### Features
+
+* finish footer and info pages ([e9a9db1](https://github.com/angusin/heroquest-cards/commit/e9a9db123e4d55c19ee364e164a89ffca0a39284))
+* finish footer and info pages ([a0d1178](https://github.com/angusin/heroquest-cards/commit/a0d117841b8630c3b6cf9d96039f747f4e9ab2f4))
+
 ## [1.3.0](https://github.com/angusin/heroquest-cards/compare/v1.2.0...v1.3.0) (2025-03-30)
 
 
