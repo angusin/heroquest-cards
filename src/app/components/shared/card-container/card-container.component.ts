@@ -5,11 +5,10 @@ import { FavoriteButtonComponent } from '../favorite-button/favorite-button.comp
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-card-container',
-  standalone: true,
-  imports: [CardTypeTagComponent, FavoriteButtonComponent, RouterModule],
-  templateUrl: './card-container.component.html',
-  styleUrl: './card-container.component.scss',
+    selector: 'app-card-container',
+    imports: [CardTypeTagComponent, FavoriteButtonComponent, RouterModule],
+    templateUrl: './card-container.component.html',
+    styleUrl: './card-container.component.scss'
 })
 export class CardContainerComponent {
   @Input() cardInfo!: Card;

@@ -1,6 +1,6 @@
 <div class="group">
   <!-- IMAGE -->
-  <div class="relative w-full z-10 cursor-pointer">
+  <div class="relative z-10 w-full cursor-pointer">
     <img
       [routerLink]="['/catalogue/detail', cardInfo.id]"
       class="mx-auto shadow-md"
@@ -9,14 +9,11 @@
   </div>
 
   <!-- CONTENT -->
-  <div
-    class="shadow-md rounded-b-2xl bg-white p-4 pt-12 dark:bg-gray-800 -translate-y-8">
-    <div class="mb-4 flex justify-between items-center">
-      <button
-        type="button"
-        class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+  <div class="-translate-y-8 rounded-b-2xl bg-gray-800 p-4 pt-12 shadow-md">
+    <div class="mb-4 flex items-center justify-between">
+      <button type="button" class="text-gray-400 hover:text-white">
         <svg
-          class="w-5 h-5"
+          class="h-5 w-5"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -41,7 +38,7 @@
     <p class="w-full text-center">
       <a
         [routerLink]="['/catalogue/detail', cardInfo.id]"
-        class="text-sm sm:text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">
+        class="text-sm font-semibold leading-tight text-white hover:underline sm:text-lg">
         {{ cardInfo.name }}
       </a>
     </p>

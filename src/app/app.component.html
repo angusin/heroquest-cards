@@ -1,5 +1,11 @@
-<app-navbar></app-navbar>
+<div class="flex min-h-screen flex-col">
+  <app-navbar></app-navbar>
 
-<div class="mx-auto max-w-screen-2xl mt-24 flex px-0 md:px-8">
-  <router-outlet></router-outlet>
+  <main class="flex-1">
+    <div class="mx-auto mt-24 max-w-screen-2xl px-0 md:px-8">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+
+  <app-footer></app-footer>
 </div>

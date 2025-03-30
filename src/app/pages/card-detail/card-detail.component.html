@@ -1,6 +1,6 @@
-<section class="px-4 md:px-0 mb-8">
+<section class="mb-8 px-4 md:px-0">
   <div
-    class="grid md:grid-cols-2 gap-8 mx-auto max-w-screen-lg justify-items-center">
+    class="mx-auto grid max-w-screen-lg justify-items-center gap-8 md:grid-cols-2">
     <div class="">
       <img
         class=""
@@ -12,35 +12,33 @@
     </div>
 
     <div
-      class="mt-0 border w-full h-fit border-gray-200 rounded-lg shadow p-6 dark:bg-gray-800 dark:border-gray-700">
-      <div class="flex items-center justify-between mb-4">
+      class="mt-0 h-fit w-full rounded-lg border border-gray-700 bg-gray-800 p-6 shadow">
+      <div class="mb-4 flex items-center justify-between">
         <app-card-type-tag [text]="card.type"></app-card-type-tag>
         <app-favorite-button
           [isFavorite]="card.isFavorite"></app-favorite-button>
       </div>
-      <h1
-        class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">
+      <h1 class="text-xl font-semibold text-white sm:text-2xl">
         {{ card.name }}
       </h1>
-      <div
-        class="pt-4 mt-2 space-y-2 border-t border-gray-200 dark:border-gray-700"></div>
-      <p class="mb-6 text-gray-500 dark:text-gray-400">
+      <div class="mt-2 space-y-2 border-t border-gray-700 pt-4"></div>
+      <p class="mb-6 text-gray-400">
         {{ card.description }}
       </p>
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-3">
           <img
-            class="w-10 h-10 rounded-full"
+            class="h-10 w-10 rounded-full"
             src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gough.png"
             alt="" />
-          <div class="font-medium dark:text-white">
+          <div class="font-medium text-white">
             <div>Jese Leos</div>
-            <div class="text-sm text-gray-500 dark:text-gray-400">23 cards</div>
+            <div class="text-sm text-gray-400">23 cards</div>
           </div>
         </div>
         <button
           type="button"
-          class="inline-flex items-center rounded-lg bg-yellow-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-yellow-800 focus:outline-none focus:ring-4 focus:ring-yellow-300 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-primary-800">
+          class="inline-flex items-center rounded-lg bg-yellow-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-yellow-700 focus:outline-none focus:ring-4 focus:ring-yellow-900">
           <svg
             class="-ms-2 me-2 h-5 w-5"
             aria-hidden="true"

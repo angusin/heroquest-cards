@@ -8,7 +8,6 @@ import { FavoriteButtonComponent } from '../../components/shared/favorite-button
 
 @Component({
   selector: 'app-card-detail',
-  standalone: true,
   imports: [NgOptimizedImage, CardTypeTagComponent, FavoriteButtonComponent],
   templateUrl: './card-detail.component.html',
   styleUrl: './card-detail.component.scss',

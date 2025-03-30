@@ -1,0 +1,56 @@
+@if (fontsLoaded) {
+  <ko-stage [config]="configStage">
+    <ko-layer #layer [config]="layerConfig">
+      <!-- Background image -->
+      <ko-image [config]="configBgImage"></ko-image>
+
+      <!-- Dashed cut border -->
+      <ko-rect [config]="borderRectConfig"></ko-rect>
+
+      <!-- Monster main image -->
+      <ko-image
+        #monsterMovableImage
+        [config]="configMonsterMovableImage"
+        (click)="attachTransformerToImage()"></ko-image>
+
+      <!-- Monster name -->
+      <ko-text [config]="configName"></ko-text>
+
+      <!-- Monster icon -->
+      <ko-image [config]="configMonsterIcon"></ko-image>
+
+      <!-- Description text -->
+      <ko-text #descriptionBox [config]="configDescription"></ko-text>
+
+      <!-- Stats box Group -->
+      <ko-group #statsBox [config]="attributesBoxGroupConfig">
+        <!-- Stats image -->
+        <ko-image [config]="configAttributesBoxImage"></ko-image>
+        <!-- Movement -->
+        <ko-text [config]="movementText"></ko-text>
+        <ko-text [config]="movementValue"></ko-text>
+        <!-- Attack -->
+        <ko-text [config]="attackText"></ko-text>
+        <ko-text [config]="attackValue"></ko-text>
+        <!-- Defence -->
+        <ko-text [config]="defendText"></ko-text>
+        <ko-text [config]="defendValue"></ko-text>
+        <!-- Body -->
+        <ko-text [config]="bodyText"></ko-text>
+        <ko-text [config]="bodyValue"></ko-text>
+        <!-- Mind -->
+        <ko-text [config]="mindText"></ko-text>
+        <ko-text [config]="mindValue"></ko-text>
+      </ko-group>
+    </ko-layer>
+    <ko-layer #dragLayer>
+      <ko-transformer #monsterImageTransformer [config]="transformerConfig">
+      </ko-transformer>
+    </ko-layer>
+  </ko-stage>
+} @else {
+  <div
+    class="flex aspect-[0.725/1] items-center justify-center rounded-[31px] bg-slate-700">
+    <div class="text-2xl text-white">Loading card image...</div>
+  </div>
+}

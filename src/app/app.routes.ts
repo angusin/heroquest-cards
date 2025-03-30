@@ -16,6 +16,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'builder',
+    loadComponent: () =>
+      import('./pages/card-builder/card-builder.component').then(
+        m => m.CardBuilderComponent
+      ),
+  },
+  {
     path: '**', // Wildcard route for a 404 page
     redirectTo: 'catalogue',
   },
