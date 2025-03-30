@@ -4,26 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // But its using the brown colors in reality
-        dragonbane: {
-          50: '#f5f1ef',
-          100: '#e2d4cf',
-          200: '#cfb8af',
-          300: '#bc9b8f',
-          400: '#a97f6f',
-          500: '#906556',
-          600: '#704f43',
-          700: '#503830',
-          800: '#30221d',
-          900: '#100b0a',
-        },
-      },
-    },
-  },
-  plugins: [require('flowbite/plugin')],
-};
-
-/*         brown: {
+        brown: {
           50: '#f5f1ef',
           100: '#e2d4cf',
           200: '#cfb8af',
@@ -46,4 +27,9 @@ module.exports = {
           700: '#52412e',
           800: '#31271b',
           900: '#100d09',
-        }, */
+        },
+      },
+    },
+  },
+  plugins: [require('flowbite/plugin')],
+};
