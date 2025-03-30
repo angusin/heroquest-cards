@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
+import { FooterComponent } from './components/layout/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, NavbarComponent, RouterModule],
+  imports: [CommonModule, NavbarComponent, FooterComponent, RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
