@@ -12,7 +12,7 @@
           type="text"
           id="monster-name"
           name="monster-name"
-          class="block w-full rounded-lg border border-gray-600 bg-gray-700 p-2.5 text-sm text-white placeholder-gray-400 focus:border-yellow-500 focus:ring-yellow-500"
+          class="block w-full rounded-lg border border-dragonbane-600 bg-dragonbane-700 p-2.5 text-sm text-white placeholder-dragonbane-400 focus:border-dragonbane-500 focus:ring-dragonbane-500"
           placeholder="Enter monster name"
           value="Skeleton King"
           (input)="onMonsterNameChange($event)"
@@ -29,7 +29,7 @@
           min="1"
           max="9"
           value="6"
-          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500"
+          class="mt-1 block w-full rounded-lg border border-dragonbane-600 bg-dragonbane-700 p-2 text-white focus:border-dragonbane-500 focus:ring-dragonbane-500"
           (input)="onAttackDiceChange($event)" />
       </div>
       <div>
@@ -43,7 +43,7 @@
           min="1"
           max="9"
           value="6"
-          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500"
+          class="mt-1 block w-full rounded-lg border border-dragonbane-600 bg-dragonbane-700 p-2 text-white focus:border-dragonbane-500 focus:ring-dragonbane-500"
           (input)="onBodyPointsChange($event)" />
       </div>
     </div>
@@ -61,7 +61,7 @@
           min="1"
           max="9"
           value="8"
-          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500"
+          class="mt-1 block w-full rounded-lg border border-dragonbane-600 bg-dragonbane-700 p-2 text-white focus:border-dragonbane-500 focus:ring-dragonbane-500"
           (input)="onMovementSquaresChange($event)" />
       </div>
       <div>
@@ -75,7 +75,7 @@
           min="1"
           max="9"
           value="6"
-          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500"
+          class="mt-1 block w-full rounded-lg border border-dragonbane-600 bg-dragonbane-700 p-2 text-white focus:border-dragonbane-500 focus:ring-dragonbane-500"
           (input)="onDefendDiceChange($event)" />
       </div>
       <div>
@@ -89,7 +89,7 @@
           min="1"
           max="9"
           value="4"
-          class="mt-1 block w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500"
+          class="mt-1 block w-full rounded-lg border border-dragonbane-600 bg-dragonbane-700 p-2 text-white focus:border-dragonbane-500 focus:ring-dragonbane-500"
           (input)="onMindPointsChange($event)" />
       </div>
     </div>
@@ -98,12 +98,14 @@
   <!-- Monster description -->
   <div class="mb-4">
     <label for="description" class="mb-2 block text-sm font-medium text-white"
-      >Description<span class="text-xs text-gray-400"> (Optional)</span></label
+      >Description<span class="text-xs text-dragonbane-400">
+        (Optional)</span
+      ></label
     >
     <textarea
       id="description"
       rows="4"
-      class="block w-full rounded-lg border border-gray-600 bg-gray-700 p-2.5 text-sm text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500"
+      class="block w-full rounded-lg border border-dragonbane-600 bg-dragonbane-700 p-2.5 text-sm text-white placeholder-dragonbane-400 focus:border-dragonbane-500 focus:ring-dragonbane-500"
       placeholder="Write the monster description..."
       (input)="onDescriptionInputChange($event)"
       (paste)="onDescriptionInputChange($event)"></textarea>
@@ -112,13 +114,13 @@
   <!-- Monster main image -->
   <div class="mb-4">
     <label class="mb-2 block text-sm font-medium text-white" for="monster_image"
-      >Monster image<span class="text-xs text-gray-400">
+      >Monster image<span class="text-xs text-dragonbane-400">
         (PNG image with transparent background)</span
       >
     </label>
     <input
       id="monster_image"
-      class="w-full cursor-pointer rounded-lg border border-gray-600 bg-gray-700 text-sm font-medium text-gray-400 file:mr-4 file:cursor-pointer file:border-0 file:bg-gray-600 file:px-4 file:py-2 file:text-white file:hover:bg-gray-700"
+      class="w-full cursor-pointer rounded-lg border border-dragonbane-600 bg-dragonbane-700 text-sm font-medium text-dragonbane-400 file:mr-4 file:cursor-pointer file:border-0 file:bg-dragonbane-600 file:px-4 file:py-2 file:text-white file:hover:bg-dragonbane-700"
       type="file"
       accept="image/png"
       (change)="onMonsterImageUpload($event)" />
@@ -127,13 +129,13 @@
   <!-- Monster icon image -->
   <div class="mb-4">
     <label class="mb-2 block text-sm font-medium text-white" for="monster_image"
-      >Monster icon<span class="text-xs text-gray-400">
+      >Monster icon<span class="text-xs text-dragonbane-400">
         (PNG image with transparent background)</span
       ></label
     >
     <input
       id="monster_image"
-      class="w-full cursor-pointer rounded-lg border border-gray-600 bg-gray-700 text-sm font-medium text-gray-400 file:mr-4 file:cursor-pointer file:border-0 file:bg-gray-600 file:px-4 file:py-2 file:text-white file:hover:bg-gray-700"
+      class="w-full cursor-pointer rounded-lg border border-dragonbane-600 bg-dragonbane-700 text-sm font-medium text-dragonbane-400 file:mr-4 file:cursor-pointer file:border-0 file:bg-dragonbane-600 file:px-4 file:py-2 file:text-white file:hover:bg-dragonbane-700"
       type="file"
       accept="image/png"
       (change)="onMonsterIconUpload($event)" />
