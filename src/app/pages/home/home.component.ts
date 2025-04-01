@@ -1,10 +1,4 @@
-import {
-  AfterViewInit,
-  ChangeDetectionStrategy,
-  Component,
-  ElementRef,
-  ViewChild,
-} from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Card } from '../../core/interfaces/common';
@@ -16,37 +10,41 @@ import { CardContainerComponent } from '../../components/shared/card-container/c
   templateUrl: './home.component.html',
   standalone: true,
   imports: [CommonModule, RouterModule, CardContainerComponent],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements OnInit {
   @ViewChild('carouselTrack') carouselTrack!: ElementRef;
 
   heroquestCardsMock: Card[] = heroquestCardsMock;
   currentSlide = 0;
-  maxSlide = this.heroquestCardsMock.length - 5; // Show 5 cards at a time
-  translateX = 0;
+  maxSlide = 0;
 
-  ngAfterViewInit(): void {
-    this.updateCarouselPosition();
+  ngOnInit(): void {
+    this.maxSlide = this.heroquestCardsMock.length - 1;
   }
 
   nextSlide(): void {
-    if (this.currentSlide < this.maxSlide) {
+    if (this.carouselTrack && this.currentSlide < this.maxSlide) {
       this.currentSlide++;
-      this.updateCarouselPosition();
+      this.scrollToCurrentSlide();
     }
   }
 
   prevSlide(): void {
-    if (this.currentSlide > 0) {
+    if (this.carouselTrack && this.currentSlide > 0) {
       this.currentSlide--;
-      this.updateCarouselPosition();
+      this.scrollToCurrentSlide();
     }
   }
 
-  private updateCarouselPosition(): void {
-    // Calculate the width of a single card item (20% of container width)
-    const cardWidth = this.carouselTrack?.nativeElement.clientWidth * 0.2;
-    this.translateX = -this.currentSlide * cardWidth;
+  private scrollToCurrentSlide(): void {
+    if (!this.carouselTrack?.nativeElement) return;
+
+    const container = this.carouselTrack.nativeElement;
+    const cards = container.children;
+    if (this.currentSlide < cards.length) {
+      const card = cards[this.currentSlide];
+      container.parentElement.scrollLeft =
+        card.offsetLeft - container.parentElement.offsetLeft;
+    }
   }
 }

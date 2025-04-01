@@ -5,11 +5,11 @@ module.exports = {
     extend: {
       colors: {
         hero: {
-          primary: '#E5B94B', // Golden yellow for primary actions and accents
+          primary: '#FFC400', // Golden yellow for primary actions and accents
           secondary: '#2B2B2B', // Darker gray for cards and sections
           dark: '#1A1A1A', // Very dark background
           light: '#E5E5E5', // Light gray for text
-          accent: '#F7C64B', // Brighter yellow for hover states
+          accent: '#dda404', // Brighter yellow for hover states
           'dark-800': '#1F1F1F', // Slightly lighter dark for cards
           'dark-700': '#2B2B2B', // Even lighter dark for hover states
           'dark-600': '#464646', // For borders and dividers
@@ -20,5 +20,21 @@ module.exports = {
       },
     },
   },
-  plugins: [require('flowbite/plugin')],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.scrollbar-hide': {
+          /* Firefox */
+          'scrollbar-width': 'none',
+          /* Safari and Chrome */
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+          '-ms-overflow-style': 'none',
+        },
+      };
+      addUtilities(newUtilities);
+    },
+    require('flowbite/plugin'),
+  ],
 };
