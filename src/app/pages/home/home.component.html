@@ -8,12 +8,12 @@
       </p>
       <button
         [routerLink]="['/catalogue']"
-        class="hover:bg-hero-primary-100 rounded-full bg-white px-6 py-3 font-bold text-hero-primary transition duration-300">
+        class="hover:bg-hero-primary-100 mx-2 rounded-full bg-white px-6 py-3 font-bold text-hero-primary transition duration-300">
         Browse Catalogue
       </button>
       <button
         [routerLink]="['/builder']"
-        class="hover:bg-hero-primary-100 rounded-full bg-white px-6 py-3 font-bold text-hero-primary transition duration-300">
+        class="hover:bg-hero-primary-100 mx-2 rounded-full bg-white px-6 py-3 font-bold text-hero-primary transition duration-300">
         Create a Card
       </button>
     </div>
@@ -26,7 +26,7 @@
     </h2>
 
     <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-      <div class="rounded-lg bg-gray-800 p-6 text-center shadow-md">
+      <div class="rounded-lg bg-hero-dark-700 p-6 text-center shadow-md">
         <div
           class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-hero-primary">
           <svg
@@ -50,7 +50,7 @@
         </p>
       </div>
 
-      <div class="rounded-lg bg-gray-800 p-6 text-center shadow-md">
+      <div class="rounded-lg bg-hero-dark-700 p-6 text-center shadow-md">
         <div
           class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-hero-primary">
           <svg
@@ -74,7 +74,7 @@
         </p>
       </div>
 
-      <div class="rounded-lg bg-gray-800 p-6 text-center shadow-md">
+      <div class="rounded-lg bg-hero-dark-700 p-6 text-center shadow-md">
         <div
           class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-hero-primary">
           <svg
@@ -100,23 +100,48 @@
     </div>
   </div>
 
-  <!-- Card Count Section -->
-  <div class="mb-16 rounded-lg bg-gray-800 px-8 py-10 text-center shadow-xl">
-    <h2 class="mb-2 text-3xl font-bold text-white">Our Growing Catalogue</h2>
-    <p class="mb-4 text-xl text-gray-300">
-      Join thousands of HeroQuest fans creating custom cards
-    </p>
-    <div class="text-5xl font-bold text-hero-primary">
-      {{ heroquestCardsMock.length }}+
-    </div>
-    <p class="mt-2 text-gray-300">Cards in our catalogue</p>
-  </div>
-
   <!-- Featured Cards Carousel -->
   <div class="mb-16">
-    <h2 class="mb-8 text-center text-3xl font-bold text-white">
-      Featured Cards
-    </h2>
+    <div class="mb-8 flex items-center justify-between">
+      <h2 class="text-3xl font-bold text-white">Featured Cards</h2>
+      <div class="flex space-x-2">
+        <button
+          (click)="prevSlide()"
+          class="rounded-full bg-hero-primary p-2 text-white shadow-lg transition duration-300 hover:bg-hero-accent disabled:cursor-not-allowed disabled:opacity-50"
+          [disabled]="currentSlide === 0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        <button
+          (click)="nextSlide()"
+          class="rounded-full bg-hero-primary p-2 text-white shadow-lg transition duration-300 hover:bg-hero-accent disabled:cursor-not-allowed disabled:opacity-50"
+          [disabled]="currentSlide === maxSlide">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </div>
 
     <div class="relative">
       <!-- Carousel Container -->
@@ -132,44 +157,20 @@
           </div>
         </div>
       </div>
-
-      <!-- Navigation Buttons -->
-      <button
-        (click)="prevSlide()"
-        class="absolute left-0 top-1/2 -translate-x-4 -translate-y-1/2 rounded-full bg-hero-primary p-2 text-white shadow-lg transition duration-300 hover:bg-hero-accent disabled:cursor-not-allowed disabled:opacity-50"
-        [disabled]="currentSlide === 0">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-
-      <button
-        (click)="nextSlide()"
-        class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 rounded-full bg-hero-primary p-2 text-white shadow-lg transition duration-300 hover:bg-hero-accent disabled:cursor-not-allowed disabled:opacity-50"
-        [disabled]="currentSlide === maxSlide">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
     </div>
+  </div>
+
+  <!-- Card Count Section -->
+  <div
+    class="mb-16 rounded-lg bg-hero-dark-700 px-8 py-10 text-center shadow-xl">
+    <h2 class="mb-2 text-3xl font-bold text-white">Our Growing Catalogue</h2>
+    <p class="mb-4 text-xl text-gray-300">
+      Join thousands of HeroQuest fans creating custom cards
+    </p>
+    <div class="text-5xl font-bold text-hero-primary">
+      {{ heroquestCardsMock.length }}+
+    </div>
+    <p class="mt-2 text-gray-300">Cards in our catalogue</p>
   </div>
 
   <!-- Call to Action -->
