@@ -25,26 +25,34 @@ export class HomeComponent implements OnInit {
   nextSlide(): void {
     if (this.carouselTrack && this.currentSlide < this.maxSlide) {
       this.currentSlide++;
-      this.scrollToCurrentSlide();
+      this.scrollToCurrentSlide(true);
     }
   }
 
   prevSlide(): void {
     if (this.carouselTrack && this.currentSlide > 0) {
       this.currentSlide--;
-      this.scrollToCurrentSlide();
+      this.scrollToCurrentSlide(true);
     }
   }
 
-  private scrollToCurrentSlide(): void {
+  private scrollToCurrentSlide(animate = false): void {
     if (!this.carouselTrack?.nativeElement) return;
 
     const container = this.carouselTrack.nativeElement;
     const cards = container.children;
     if (this.currentSlide < cards.length) {
       const card = cards[this.currentSlide];
-      container.parentElement.scrollLeft =
-        card.offsetLeft - container.parentElement.offsetLeft;
+      const scrollTarget = card.offsetLeft - container.parentElement.offsetLeft;
+
+      if (animate) {
+        container.parentElement.scrollTo({
+          left: scrollTarget,
+          behavior: 'smooth',
+        });
+      } else {
+        container.parentElement.scrollLeft = scrollTarget;
+      }
     }
   }
 }
