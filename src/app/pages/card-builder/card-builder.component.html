@@ -1,12 +1,12 @@
-<section class="mb-8 px-4 md:px-0">
+<section class="mb-8 px-0">
   <div
     class="mx-auto grid max-w-screen-lg justify-items-center gap-8 md:grid-cols-2">
     <div
-      class="border-hero-dark-600 bg-hero-dark-800 mt-0 h-fit w-full rounded-lg border p-6 shadow">
-      <h1 class="text-hero-light text-center text-2xl font-semibold">
+      class="mt-0 h-fit w-full rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-6 shadow">
+      <h1 class="text-center text-2xl font-semibold text-hero-light">
         Monster Card Creator
       </h1>
-      <div class="border-hero-dark-600 mb-4 mt-2 space-y-2 border-t"></div>
+      <div class="mb-4 mt-2 space-y-2 border-t border-hero-dark-600"></div>
       <app-card-builder-form
         (monsterNameChange)="onMonsterNameChange($event)"
         (movementSquaresChange)="onMovementSquaresChange($event)"
@@ -17,7 +17,7 @@
         (descriptionInputChange)="onDescriptionInputChange($event)"
         (monsterImageUpload)="onMonsterImageUpload($event)"
         (monsterIconUpload)="onMonsterIconUpload($event)" />
-      <div class="border-hero-dark-600 my-4 space-y-2 border-t"></div>
+      <div class="my-4 space-y-2 border-t border-hero-dark-600"></div>
       <div class="flex justify-end">
         <button
           (click)="onDownloadCard()"

@@ -1,4 +1,11 @@
-import { Component, ElementRef, OnInit, ViewChild, AfterViewInit, HostListener } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+  AfterViewInit,
+  HostListener,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Card } from '../../core/interfaces/common';
@@ -52,18 +59,21 @@ export class HomeComponent implements OnInit, AfterViewInit {
   private calculateVisibleCards(): void {
     if (!this.carouselTrack?.nativeElement) return;
 
-    const containerWidth = this.carouselTrack.nativeElement.parentElement.offsetWidth;
     const screenWidth = window.innerWidth;
 
     // Determine visible cards based on screen width
     // These values should match the responsive classes in the template
-    if (screenWidth >= 1280) { // xl breakpoint
+    if (screenWidth >= 1280) {
+      // xl breakpoint
       this.visibleCards = 5; // xl:w-1/5
-    } else if (screenWidth >= 1024) { // lg breakpoint
+    } else if (screenWidth >= 1024) {
+      // lg breakpoint
       this.visibleCards = 4; // lg:w-1/4
-    } else if (screenWidth >= 768) { // md breakpoint
+    } else if (screenWidth >= 768) {
+      // md breakpoint
       this.visibleCards = 3; // md:w-1/3
-    } else if (screenWidth >= 640) { // sm breakpoint
+    } else if (screenWidth >= 640) {
+      // sm breakpoint
       this.visibleCards = 2; // sm:w-1/2
     } else {
       this.visibleCards = 1; // Default for mobile (actually showing 1.15 cards)
@@ -72,7 +82,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   private calculateMaxSlide(): void {
     // Maximum slide is the total number of cards minus the number of visible cards
-    this.maxSlide = Math.max(0, this.heroquestCardsMock.length - this.visibleCards);
+    this.maxSlide = Math.max(
+      0,
+      this.heroquestCardsMock.length - this.visibleCards
+    );
   }
 
   private scrollToCurrentSlide(animate = false): void {
