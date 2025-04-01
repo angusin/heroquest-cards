@@ -1,0 +1,194 @@
+<div class="container mx-auto px-4 py-8">
+  <!-- Banner Section -->
+  <div class="mb-12 overflow-hidden rounded-lg bg-hero-primary shadow-xl">
+    <div class="px-8 py-16 text-center">
+      <h1 class="mb-4 text-4xl font-bold text-white">HeroQuest Card Creator</h1>
+      <p class="mb-6 text-xl text-white/80">
+        Design, share, and collect fanmade HeroQuest cards
+      </p>
+      <button
+        [routerLink]="['/catalogue']"
+        class="hover:bg-hero-primary-100 rounded-full bg-white px-6 py-3 font-bold text-hero-primary transition duration-300">
+        Browse Catalogue
+      </button>
+      <button
+        [routerLink]="['/builder']"
+        class="hover:bg-hero-primary-100 rounded-full bg-white px-6 py-3 font-bold text-hero-primary transition duration-300">
+        Create a Card
+      </button>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="mb-16">
+    <h2 class="mb-12 text-center text-3xl font-bold text-white">
+      Why Use Our App?
+    </h2>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <div class="rounded-lg bg-gray-800 p-6 text-center shadow-md">
+        <div
+          class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-hero-primary">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+          </svg>
+        </div>
+        <h3 class="mb-2 text-xl font-semibold text-white">
+          Create Custom Cards
+        </h3>
+        <p class="text-gray-300">
+          Design your own HeroQuest cards with our intuitive builder
+        </p>
+      </div>
+
+      <div class="rounded-lg bg-gray-800 p-6 text-center shadow-md">
+        <div
+          class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-hero-primary">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h3 class="mb-2 text-xl font-semibold text-white">
+          Share Your Collection
+        </h3>
+        <p class="text-gray-300">
+          Share your creations with the HeroQuest community
+        </p>
+      </div>
+
+      <div class="rounded-lg bg-gray-800 p-6 text-center shadow-md">
+        <div
+          class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-hero-primary">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+          </svg>
+        </div>
+        <h3 class="mb-2 text-xl font-semibold text-white">
+          Organize Collections
+        </h3>
+        <p class="text-gray-300">
+          Keep your cards organized in custom collections
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card Count Section -->
+  <div class="mb-16 rounded-lg bg-gray-800 px-8 py-10 text-center shadow-xl">
+    <h2 class="mb-2 text-3xl font-bold text-white">Our Growing Catalogue</h2>
+    <p class="mb-4 text-xl text-gray-300">
+      Join thousands of HeroQuest fans creating custom cards
+    </p>
+    <div class="text-5xl font-bold text-hero-primary">
+      {{ heroquestCardsMock.length }}+
+    </div>
+    <p class="mt-2 text-gray-300">Cards in our catalogue</p>
+  </div>
+
+  <!-- Featured Cards Carousel -->
+  <div class="mb-16">
+    <h2 class="mb-8 text-center text-3xl font-bold text-white">
+      Featured Cards
+    </h2>
+
+    <div class="relative">
+      <!-- Carousel Container -->
+      <div class="overflow-hidden">
+        <div
+          class="flex transition-transform duration-300"
+          #carouselTrack
+          [style.transform]="'translateX(' + translateX + 'px)'">
+          <div
+            *ngFor="let card of heroquestCardsMock"
+            class="w-1/5 flex-shrink-0 px-2">
+            <app-card-container [cardInfo]="card"></app-card-container>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button
+        (click)="prevSlide()"
+        class="absolute left-0 top-1/2 -translate-x-4 -translate-y-1/2 rounded-full bg-hero-primary p-2 text-white shadow-lg transition duration-300 hover:bg-hero-accent disabled:cursor-not-allowed disabled:opacity-50"
+        [disabled]="currentSlide === 0">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <button
+        (click)="nextSlide()"
+        class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 rounded-full bg-hero-primary p-2 text-white shadow-lg transition duration-300 hover:bg-hero-accent disabled:cursor-not-allowed disabled:opacity-50"
+        [disabled]="currentSlide === maxSlide">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Call to Action -->
+  <div class="rounded-lg bg-hero-primary px-8 py-12 text-center shadow-xl">
+    <h2 class="mb-4 text-3xl font-bold text-white">
+      Ready to Create Your Own Cards?
+    </h2>
+    <p class="mb-6 text-xl text-white/80">
+      Join our community and start designing today
+    </p>
+    <button
+      [routerLink]="['/catalogue']"
+      class="hover:bg-hero-primary-100 rounded-full bg-white px-6 py-3 font-bold text-hero-primary transition duration-300">
+      Browse Catalogue
+    </button>
+    <button
+      [routerLink]="['/builder']"
+      class="hover:bg-hero-primary-700 ml-4 rounded-full bg-hero-primary px-6 py-3 font-bold text-white transition duration-300">
+      Create a Card
+    </button>
+  </div>
+</div>
