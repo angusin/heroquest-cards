@@ -2,6 +2,11 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
+    path: '',
+    loadComponent: () =>
+      import('./pages/home/home.component').then(m => m.HomeComponent),
+  },
+  {
     path: 'catalogue',
     loadComponent: () =>
       import('./pages/card-catalogue/card-catalogue.component').then(
@@ -52,6 +57,6 @@ export const routes: Routes = [
   },
   {
     path: '**', // Wildcard route for a 404 page
-    redirectTo: 'catalogue',
+    redirectTo: '',
   },
 ];
