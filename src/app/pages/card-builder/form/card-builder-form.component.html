@@ -98,7 +98,9 @@
   <!-- Monster description -->
   <div class="mb-4">
     <label for="description" class="mb-2 block text-sm font-medium text-white"
-      >Description<span class="text-xs text-gray-400"> (Optional)</span></label
+      >Description<span class="text-xs text-hero-light-300">
+        (Optional)</span
+      ></label
     >
     <textarea
       id="description"
@@ -112,13 +114,13 @@
   <!-- Monster main image -->
   <div class="mb-4">
     <label class="mb-2 block text-sm font-medium text-white" for="monster_image"
-      >Monster image<span class="text-xs text-gray-400">
+      >Monster image<span class="text-xs text-hero-light-300">
         (PNG image with transparent background)</span
       >
     </label>
     <input
       id="monster_image"
-      class="w-full cursor-pointer rounded-lg border border-gray-600 bg-gray-700 text-sm font-medium text-gray-400 file:mr-4 file:cursor-pointer file:border-0 file:bg-gray-600 file:px-4 file:py-2 file:text-white file:hover:bg-gray-700"
+      class="w-full cursor-pointer rounded-lg border border-hero-dark-600 bg-hero-dark-800 text-sm font-medium text-hero-light-300"
       type="file"
       accept="image/png"
       (change)="onMonsterImageUpload($event)" />
@@ -127,13 +129,13 @@
   <!-- Monster icon image -->
   <div class="mb-4">
     <label class="mb-2 block text-sm font-medium text-white" for="monster_image"
-      >Monster icon<span class="text-xs text-gray-400">
+      >Monster icon<span class="text-xs text-hero-light-300">
         (PNG image with transparent background)</span
       ></label
     >
     <input
       id="monster_image"
-      class="w-full cursor-pointer rounded-lg border border-gray-600 bg-gray-700 text-sm font-medium text-gray-400 file:mr-4 file:cursor-pointer file:border-0 file:bg-gray-600 file:px-4 file:py-2 file:text-white file:hover:bg-gray-700"
+      class="w-full cursor-pointer rounded-lg border border-hero-dark-600 bg-hero-dark-800 text-sm font-medium text-hero-light-300"
       type="file"
       accept="image/png"
       (change)="onMonsterIconUpload($event)" />
