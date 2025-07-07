@@ -2,10 +2,15 @@ import { Component, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { CardBuilderCanvasComponent } from './canvas/card-builder-canvas.component';
 import { CardBuilderFormComponent } from './form/card-builder-form.component';
 import { isPlatformBrowser } from '@angular/common';
+import { ButtonComponent } from '../../components/shared/button/button.component';
 
 @Component({
   selector: 'app-card-builder',
-  imports: [CardBuilderCanvasComponent, CardBuilderFormComponent],
+  imports: [
+    CardBuilderCanvasComponent,
+    CardBuilderFormComponent,
+    ButtonComponent,
+  ],
   templateUrl: './card-builder.component.html',
   styleUrl: './card-builder.component.scss',
 })
