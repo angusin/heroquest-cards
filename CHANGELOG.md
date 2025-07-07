@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.6.0](https://github.com/angusin/heroquest-cards/compare/v1.5.0...v1.6.0) (2025-07-07)
+
+
+### Features
+
+* add animation to carousel ([c96f0ed](https://github.com/angusin/heroquest-cards/commit/c96f0ed2540e117deb16dac1f7d42420c9b30cdb))
+* change colors ([d473e81](https://github.com/angusin/heroquest-cards/commit/d473e81ba4f53eb84f65f897a8dd952d115bd626))
+* continue tweaking colors ([8c719e2](https://github.com/angusin/heroquest-cards/commit/8c719e2468590bfb885bb101bda1f43a0ff165e0))
+* create home component and route ([4480945](https://github.com/angusin/heroquest-cards/commit/44809453bd59f5d5b62bfab97312943384d941ac))
+* generate the first home content ([275f1fa](https://github.com/angusin/heroquest-cards/commit/275f1fa57731cf0c0cde31e6c509a053bce97d52))
+* style edits and main image ([e5b5344](https://github.com/angusin/heroquest-cards/commit/e5b5344d8d68566940752579fb66a557268f5ce8))
+
+
+### Bug Fixes
+
+* carousel buttons ([f2d2b62](https://github.com/angusin/heroquest-cards/commit/f2d2b62ef57ae180bad4126f6f930912991182d2))
+
 ## [1.5.0](https://github.com/angusin/heroquest-cards/compare/v1.4.0...v1.5.0) (2025-03-30)
 
 
