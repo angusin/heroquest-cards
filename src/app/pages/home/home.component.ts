@@ -6,9 +6,10 @@ import {
   AfterViewInit,
   HostListener,
   ChangeDetectionStrategy,
+  inject,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { Card } from '../../core/interfaces/common';
 import { heroquestCardsMock } from '../../core/constants/example-cards';
 import { CardContainerComponent } from '../../components/shared/card-container/card-container.component';
@@ -27,6 +28,7 @@ import { ButtonComponent } from '../../components/shared/button/button.component
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('carouselTrack') carouselTrack!: ElementRef;
+  private router = inject(Router);
 
   heroquestCardsMock: Card[] = heroquestCardsMock;
   currentSlide = 0;
@@ -42,6 +44,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.calculateVisibleCards();
     this.calculateMaxSlide();
   }
+
+  navigateToCatalogue = () => {
+    this.router.navigate(['/catalogue']);
+  };
+
+  navigateToBuilder = () => {
+    this.router.navigate(['/builder']);
+  };
 
   @HostListener('window:resize')
   onResize(): void {

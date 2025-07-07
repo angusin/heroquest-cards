@@ -24,16 +24,19 @@
       <p class="mb-6 text-xl font-semibold text-white">
         Design, share, and collect fanmade HeroQuest cards
       </p>
-      <button
-        [routerLink]="['/catalogue']"
-        class="mx-2 rounded-full bg-hero-primary px-6 py-3 font-bold text-hero-dark transition duration-300 hover:bg-hero-accent">
-        Browse Catalogue
-      </button>
-      <button
-        [routerLink]="['/builder']"
-        class="mx-2 rounded-full bg-hero-primary px-6 py-3 font-bold text-hero-dark transition duration-300 hover:bg-hero-accent">
-        Create a Card
-      </button>
+      <app-button
+        class="mr-4"
+        [text]="'Browse Catalogue'"
+        [color]="'primary'"
+        [size]="'large'"
+        [rounded]="true"
+        (onClick)="navigateToCatalogue()"></app-button>
+      <app-button
+        [text]="'Create a card'"
+        [color]="'primary'"
+        [size]="'large'"
+        [rounded]="true"
+        (onClick)="navigateToBuilder()"></app-button>
     </div>
   </div>
 
