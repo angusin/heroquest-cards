@@ -118,26 +118,66 @@
         (PNG image with transparent background)</span
       >
     </label>
-    <input
-      id="monster_image"
-      class="w-full cursor-pointer rounded-lg border border-hero-dark-600 bg-hero-dark-800 text-sm font-medium text-hero-light-300"
-      type="file"
-      accept="image/png"
-      (change)="onMonsterImageUpload($event)" />
+    <div class="relative">
+      <input
+        id="monster_image"
+        class="absolute inset-0 h-full w-full cursor-pointer opacity-0"
+        type="file"
+        accept="image/png"
+        (change)="onMonsterImageUpload($event)" />
+      <div
+        class="flex h-12 w-full items-center justify-center rounded-lg border border-hero-dark-600 bg-hero-dark-800 px-4 py-2 text-sm font-medium text-hero-light-300 transition-colors hover:bg-hero-dark-700">
+        <svg
+          class="mr-2 h-5 w-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+        </svg>
+        <span *ngIf="!selectedMonsterImageName">Choose monster image</span>
+        <span *ngIf="selectedMonsterImageName" class="text-white">{{
+          selectedMonsterImageName
+        }}</span>
+      </div>
+    </div>
   </div>
 
   <!-- Monster icon image -->
   <div class="mb-4">
-    <label class="mb-2 block text-sm font-medium text-white" for="monster_image"
+    <label class="mb-2 block text-sm font-medium text-white" for="monster_icon"
       >Monster icon<span class="text-xs text-hero-light-300">
         (PNG image with transparent background)</span
       ></label
     >
-    <input
-      id="monster_image"
-      class="w-full cursor-pointer rounded-lg border border-hero-dark-600 bg-hero-dark-800 text-sm font-medium text-hero-light-300"
-      type="file"
-      accept="image/png"
-      (change)="onMonsterIconUpload($event)" />
+    <div class="relative">
+      <input
+        id="monster_icon"
+        class="absolute inset-0 h-full w-full cursor-pointer opacity-0"
+        type="file"
+        accept="image/png"
+        (change)="onMonsterIconUpload($event)" />
+      <div
+        class="flex h-12 w-full items-center justify-center rounded-lg border border-hero-dark-600 bg-hero-dark-800 px-4 py-2 text-sm font-medium text-hero-light-300 transition-colors hover:bg-hero-dark-700">
+        <svg
+          class="mr-2 h-5 w-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+        </svg>
+        <span *ngIf="!selectedMonsterIconName">Choose monster icon</span>
+        <span *ngIf="selectedMonsterIconName" class="text-white">{{
+          selectedMonsterIconName
+        }}</span>
+      </div>
+    </div>
   </div>
 </form>
