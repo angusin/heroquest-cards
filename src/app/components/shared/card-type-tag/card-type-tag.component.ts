@@ -2,10 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'app-card-type-tag',
-    imports: [CommonModule],
-    templateUrl: './card-type-tag.component.html',
-    styleUrl: './card-type-tag.component.scss'
+  selector: 'app-card-type-tag',
+  imports: [CommonModule],
+  templateUrl: './card-type-tag.component.html',
+  styleUrl: './card-type-tag.component.scss',
 })
 export class CardTypeTagComponent {
   @Input() text!: string;

@@ -1,5 +1,5 @@
 <div
-  class="fixed start-0 top-0 z-20 h-16 w-full border-b border-gray-700 bg-gray-800">
+  class="border-hero-dark-600 bg-hero-dark-800 fixed start-0 top-0 z-20 h-16 w-full border-b">
   <nav class="mx-auto max-w-screen-2xl px-4 py-2.5 md:px-8">
     <div class="flex flex-wrap items-center justify-between">
       <div class="flex items-center justify-start">
@@ -7,11 +7,11 @@
         <a href="/" class="mr-4 flex items-center justify-between">
           <img [src]="'assets/hq_logo.png'" width="40" alt="" />
           <span
-            class="ml-3 block self-center whitespace-nowrap text-2xl font-semibold text-white sm:hidden">
+            class="text-hero-light ml-3 block self-center whitespace-nowrap text-2xl font-semibold sm:hidden">
             HQ Cards
           </span>
           <span
-            class="ml-3 hidden self-center whitespace-nowrap text-2xl font-semibold text-white sm:block">
+            class="text-hero-light ml-3 hidden self-center whitespace-nowrap text-2xl font-semibold sm:block">
             HeroQuest Cards
           </span>
         </a>
@@ -21,14 +21,14 @@
         <button
           [routerLink]="['/builder']"
           type="button"
-          class="me-2 mr-2 flex cursor-pointer items-center rounded-lg bg-yellow-600 px-3 py-2.5 text-center text-sm font-medium text-white hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-900">
+          class="bg-hero-primary text-hero-dark hover:bg-hero-accent focus:ring-hero-accent/50 me-2 mr-2 flex cursor-pointer items-center rounded-lg px-3 py-2.5 text-center text-sm font-medium focus:outline-none focus:ring-4">
           Create card
         </button>
 
         <!-- USER MENU BUTTON -->
         <button
           type="button"
-          class="mx-3 flex cursor-pointer rounded-full bg-gray-800 text-sm focus:ring-4 focus:ring-gray-600 md:mr-0"
+          class="bg-hero-dark-800 focus:ring-hero-dark-600 mx-3 flex cursor-pointer rounded-full text-sm focus:ring-4 md:mr-0"
           id="user-menu-button"
           aria-expanded="false"
           data-dropdown-toggle="dropdown">
@@ -41,73 +41,41 @@
 
         <!-- USER DROPDOWN -->
         <div
-          class="z-50 my-4 hidden w-56 list-none divide-y divide-gray-600 rounded bg-gray-700 text-base shadow"
+          class="divide-hero-dark-600 bg-hero-dark-700 z-50 my-4 hidden w-56 list-none divide-y rounded text-base shadow"
           id="dropdown">
           <div class="px-4 py-3">
-            <span class="block text-sm font-semibold text-white"
+            <span class="text-hero-light block text-sm font-semibold"
               >Neil Sims</span
             >
-            <span class="block truncate text-sm text-white"
+            <span class="text-hero-light-200 block truncate text-sm"
               >'name arroba flowbite.com'</span
             >
           </div>
-          <ul class="py-1 text-gray-300" aria-labelledby="dropdown">
+          <ul class="text-hero-light-200 py-1" aria-labelledby="dropdown">
             <li>
               <a
                 href="#"
-                class="block px-4 py-2 text-sm text-gray-400 hover:bg-gray-600 hover:text-white"
+                class="text-hero-light-200 hover:bg-hero-dark-600 hover:text-hero-light block px-4 py-2 text-sm"
                 >My profile</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="block px-4 py-2 text-sm text-gray-400 hover:bg-gray-600 hover:text-white"
+                class="text-hero-light-200 hover:bg-hero-dark-600 hover:text-hero-light block px-4 py-2 text-sm"
                 >Account settings</a
               >
             </li>
           </ul>
-          <ul class="py-1 text-gray-300" aria-labelledby="dropdown">
+          <ul class="text-hero-light-200 py-1" aria-labelledby="dropdown">
             <li>
               <a
                 href="#"
-                class="flex items-center px-4 py-2 text-sm hover:bg-gray-600 hover:text-white"
-                ><svg
-                  class="mr-2 h-5 w-5 text-gray-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    fill-rule="evenodd"
-                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                My likes</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="flex items-center px-4 py-2 text-sm hover:bg-gray-600 hover:text-white"
-                ><svg
-                  class="mr-2 h-5 w-5 text-gray-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path>
-                </svg>
-                Collections</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="flex items-center justify-between px-4 py-2 text-sm hover:bg-gray-600 hover:text-white">
+                class="hover:bg-hero-dark-600 hover:text-hero-light flex items-center justify-between px-4 py-2 text-sm">
                 <span class="flex items-center">
                   <svg
                     aria-hidden="true"
-                    class="text-primary-500 mr-2 h-5 w-5"
+                    class="text-hero-primary mr-2 h-5 w-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
@@ -120,7 +88,7 @@
                 </span>
                 <svg
                   aria-hidden="true"
-                  class="h-5 w-5 text-gray-400"
+                  class="text-hero-light-400 h-5 w-5"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg">
@@ -132,11 +100,11 @@
               </a>
             </li>
           </ul>
-          <ul class="py-1 text-gray-300" aria-labelledby="dropdown">
+          <ul class="text-hero-light-200 py-1" aria-labelledby="dropdown">
             <li>
               <a
                 href="#"
-                class="block px-4 py-2 text-sm hover:bg-gray-600 hover:text-white"
+                class="hover:bg-hero-dark-600 hover:text-hero-light block px-4 py-2 text-sm"
                 >Sign out</a
               >
             </li>
