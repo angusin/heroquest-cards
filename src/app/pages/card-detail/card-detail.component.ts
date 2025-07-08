@@ -1,5 +1,10 @@
 import { NgOptimizedImage } from '@angular/common';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  OnInit,
+} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ButtonComponent } from '../../components/shared/button/button.component';
 import { CardTypeTagComponent } from '../../components/shared/card-type-tag/card-type-tag.component';
@@ -23,7 +28,7 @@ export class CardDetailComponent implements OnInit {
   cards = heroquestCardsMock;
   card!: Card;
 
-  constructor(private route: ActivatedRoute) {}
+  route = inject(ActivatedRoute);
 
   ngOnInit() {
     this.route.params.subscribe(params => {

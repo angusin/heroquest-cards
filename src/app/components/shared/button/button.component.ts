@@ -23,13 +23,13 @@ export class ButtonComponent {
   disabled = input<boolean>(false);
   rounded = input<boolean>(false);
 
-  onClick = output<void>();
+  buttonClick = output<void>();
 
   get iconNameValue(): IconName | null {
     return this.iconName() || null;
   }
 
   onButtonClick(): void {
-    this.onClick.emit();
+    this.buttonClick.emit();
   }
 }

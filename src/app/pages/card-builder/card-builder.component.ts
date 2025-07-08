@@ -1,4 +1,4 @@
-import { Component, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
+import { Component, inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { CardBuilderCanvasComponent } from './canvas/card-builder-canvas.component';
 import { CardBuilderFormComponent } from './form/card-builder-form.component';
 import { isPlatformBrowser } from '@angular/common';
@@ -28,7 +28,9 @@ export class CardBuilderComponent {
   monsterIcon!: HTMLImageElement;
   isBrowser = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: object) {
+  platformId = inject(PLATFORM_ID);
+
+  constructor() {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
