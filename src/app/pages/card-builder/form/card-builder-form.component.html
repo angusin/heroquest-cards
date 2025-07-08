@@ -12,7 +12,7 @@
           type="text"
           id="monster-name"
           name="monster-name"
-          class="focus:border-hero-primary-focus focus:ring-hero-primary-focus block w-full rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-2.5 text-sm text-white placeholder-hero-light-300"
+          class="block w-full rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-2.5 text-sm text-white placeholder-hero-light-300 focus:border-hero-primary-focus focus:ring-hero-primary-focus"
           placeholder="Enter monster name"
           value="Skeleton King"
           (input)="onMonsterNameChange($event)"
@@ -29,7 +29,7 @@
           min="1"
           max="9"
           value="6"
-          class="focus:border-hero-primary-focus focus:ring-hero-primary-focus mt-1 block w-full rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-2.5 text-sm text-white placeholder-hero-light-300"
+          class="mt-1 block w-full rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-2.5 text-sm text-white placeholder-hero-light-300 focus:border-hero-primary-focus focus:ring-hero-primary-focus"
           (input)="onAttackDiceChange($event)" />
       </div>
       <div>
@@ -43,7 +43,7 @@
           min="1"
           max="9"
           value="6"
-          class="focus:border-hero-primary-focus focus:ring-hero-primary-focus mt-1 block w-full rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-2.5 text-sm text-white placeholder-hero-light-300"
+          class="mt-1 block w-full rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-2.5 text-sm text-white placeholder-hero-light-300 focus:border-hero-primary-focus focus:ring-hero-primary-focus"
           (input)="onBodyPointsChange($event)" />
       </div>
     </div>
@@ -61,7 +61,7 @@
           min="1"
           max="9"
           value="8"
-          class="focus:border-hero-primary-focus focus:ring-hero-primary-focus mt-1 block w-full rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-2.5 text-sm text-white placeholder-hero-light-300"
+          class="mt-1 block w-full rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-2.5 text-sm text-white placeholder-hero-light-300 focus:border-hero-primary-focus focus:ring-hero-primary-focus"
           (input)="onMovementSquaresChange($event)" />
       </div>
       <div>
@@ -75,7 +75,7 @@
           min="1"
           max="9"
           value="6"
-          class="focus:border-hero-primary-focus focus:ring-hero-primary-focus mt-1 block w-full rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-2.5 text-sm text-white placeholder-hero-light-300"
+          class="mt-1 block w-full rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-2.5 text-sm text-white placeholder-hero-light-300 focus:border-hero-primary-focus focus:ring-hero-primary-focus"
           (input)="onDefendDiceChange($event)" />
       </div>
       <div>
@@ -89,7 +89,7 @@
           min="1"
           max="9"
           value="4"
-          class="focus:border-hero-primary-focus focus:ring-hero-primary-focus mt-1 block w-full rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-2.5 text-sm text-white placeholder-hero-light-300"
+          class="mt-1 block w-full rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-2.5 text-sm text-white placeholder-hero-light-300 focus:border-hero-primary-focus focus:ring-hero-primary-focus"
           (input)="onMindPointsChange($event)" />
       </div>
     </div>
@@ -105,7 +105,7 @@
     <textarea
       id="description"
       rows="4"
-      class="focus:border-hero-primary-focus focus:ring-hero-primary-focus block w-full rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-2.5 text-sm text-white placeholder-hero-light-300"
+      class="block w-full rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-2.5 text-sm text-white placeholder-hero-light-300 focus:border-hero-primary-focus focus:ring-hero-primary-focus"
       placeholder="Write the monster description..."
       (input)="onDescriptionInputChange($event)"
       (paste)="onDescriptionInputChange($event)"></textarea>
