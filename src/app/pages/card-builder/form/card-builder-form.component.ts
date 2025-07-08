@@ -1,9 +1,7 @@
 import { Component, EventEmitter, output, Output } from '@angular/core';
-import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-card-builder-form',
-  imports: [NgIf],
   templateUrl: './card-builder-form.component.html',
   styleUrl: './card-builder-form.component.scss',
 })
