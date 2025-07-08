@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.7.0](https://github.com/angusin/heroquest-cards/compare/v1.6.0...v1.7.0) (2025-07-08)
+
+
+### Features
+
+* add new home buttons ([8dcf2e7](https://github.com/angusin/heroquest-cards/commit/8dcf2e7bed20d15c5b33f0e6414be3248b271489))
+* change button in card detail ([d785ea2](https://github.com/angusin/heroquest-cards/commit/d785ea2e68815d6e8aa7acdf80b932711df654d6))
+* change styles of card detail ([e1eea49](https://github.com/angusin/heroquest-cards/commit/e1eea49ac5ce3e436311c469661965eb324f4f4d))
+* create button component ([73e47c6](https://github.com/angusin/heroquest-cards/commit/73e47c6c8360ab492ce40c0a60f0b8a74cf0e0b5))
+* create icon component and change all ibutton icons ([017cbb9](https://github.com/angusin/heroquest-cards/commit/017cbb94c4f33348b64017208218ef8b5e3fbf85))
+* edit color styles ([4d60c48](https://github.com/angusin/heroquest-cards/commit/4d60c48e196b304013fd9e0d5f7baac589805cca))
+* edit font color styles ([cf31e62](https://github.com/angusin/heroquest-cards/commit/cf31e62fe663c20af73f16c0a2ddfd8f7bdb8535))
+* edit form styles first part ([5255867](https://github.com/angusin/heroquest-cards/commit/5255867a817808f1035b07fa204197644cd93962))
+* edit form styles second part ([ec4132e](https://github.com/angusin/heroquest-cards/commit/ec4132e7855ce6901537ba2846178061f1811a83))
+* edit top filters styles ([af788ae](https://github.com/angusin/heroquest-cards/commit/af788ae05321bb46e3eba8d734bd8c73d86e7b0a))
+* style file upload inputs ([9e0d447](https://github.com/angusin/heroquest-cards/commit/9e0d447cca143d9249e9b2bd04d7ac7db64d2198))
+
 ## [1.6.0](https://github.com/angusin/heroquest-cards/compare/v1.5.0...v1.6.0) (2025-07-07)
 
 ### Features
