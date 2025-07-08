@@ -1,0 +1,104 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+
+  // Size variants
+  &.btn-small {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  &.btn-medium {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  &.btn-large {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  // Color variants
+  &.btn-primary {
+    background-color: theme('colors.hero.primary');
+    color: theme('colors.hero.dark');
+
+    &:hover:not(:disabled) {
+      background-color: theme('colors.hero.primary-accent');
+    }
+
+    &:focus {
+      outline: 4px solid theme('colors.hero.primary-focus');
+    }
+  }
+
+  &.btn-secondary {
+    background-color: theme('colors.hero.dark-600');
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: theme('colors.hero.dark-700');
+    }
+
+    &:focus {
+      outline: 4px solid theme('colors.hero.light-400');
+    }
+  }
+
+  &.btn-success {
+    background-color: #10b981;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: #059669;
+    }
+
+    &:focus {
+    }
+  }
+
+  &.btn-danger {
+    background-color: #ef4444;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: #dc2626;
+    }
+
+    &:focus {
+    }
+  }
+
+  &.btn-warning {
+    background-color: #f59e0b;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: #d97706;
+    }
+
+    &:focus {
+    }
+  }
+
+  &.btn-info {
+    background-color: #06b6d4;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: #0891b2;
+    }
+
+    &:focus {
+    }
+  }
+}

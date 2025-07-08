@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { CommonModule } from '@angular/common';
@@ -12,7 +12,7 @@ import { initFlowbite } from 'flowbite';
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router) {}
+  router = inject(Router);
 
   ngOnInit() {
     // We should fix this to load with a single initFlowbite() once Angular 19 is compatible with Flowbite

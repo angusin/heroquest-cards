@@ -10,23 +10,27 @@
       <p class="mb-6 text-xl font-semibold text-white">
         Design, share, and collect fanmade HeroQuest cards
       </p>
-      <button
-        [routerLink]="['/catalogue']"
-        class="mx-2 rounded-full bg-hero-primary px-6 py-3 font-bold text-hero-dark transition duration-300 hover:bg-hero-accent">
-        Browse Catalogue
-      </button>
-      <button
-        [routerLink]="['/builder']"
-        class="mx-2 rounded-full bg-hero-primary px-6 py-3 font-bold text-hero-dark transition duration-300 hover:bg-hero-accent">
-        Create a Card
-      </button>
+      <app-button
+        class="mr-4"
+        [text]="'Browse Catalogue'"
+        [color]="'primary'"
+        [size]="'large'"
+        [rounded]="true"
+        (buttonClick)="navigateToCatalogue()"></app-button>
+      <app-button
+        [text]="'Create a card'"
+        [color]="'primary'"
+        [size]="'large'"
+        [rounded]="true"
+        (buttonClick)="navigateToBuilder()"></app-button>
     </div>
   </div>
 
   <!-- Features Section -->
   <div class="mb-12">
     <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
-      <div class="rounded-lg bg-hero-dark-700 p-6 text-center shadow-md">
+      <div
+        class="rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-6 text-center shadow-md">
         <div
           class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-hero-primary">
           <svg
@@ -50,7 +54,8 @@
         </p>
       </div>
 
-      <div class="rounded-lg bg-hero-dark-700 p-6 text-center shadow-md">
+      <div
+        class="rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-6 text-center shadow-md">
         <div
           class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-hero-primary">
           <svg
@@ -74,7 +79,8 @@
         </p>
       </div>
 
-      <div class="rounded-lg bg-hero-dark-700 p-6 text-center shadow-md">
+      <div
+        class="rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-6 text-center shadow-md">
         <div
           class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-hero-primary">
           <svg
@@ -98,7 +104,8 @@
         </p>
       </div>
 
-      <div class="rounded-lg bg-hero-dark-700 p-6 text-center shadow-md">
+      <div
+        class="rounded-lg border border-hero-dark-600 bg-hero-dark-800 p-6 text-center shadow-md">
         <div
           class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-hero-primary">
           <svg
@@ -179,7 +186,7 @@
 
   <!-- Card Count Section -->
   <div
-    class="mb-12 rounded-lg bg-hero-dark-700 px-8 py-10 text-center shadow-xl">
+    class="mb-12 rounded-lg border border-hero-dark-600 bg-hero-dark-800 px-8 py-10 text-center shadow-xl">
     <h2 class="mb-2 text-3xl font-bold text-white">
       You never have enough cards
     </h2>

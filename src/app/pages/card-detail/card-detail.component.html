@@ -11,8 +11,7 @@
         priority />
     </div>
 
-    <div
-      class="mt-0 h-fit w-full rounded-lg border border-gray-700 bg-gray-800 p-6 shadow">
+    <div class="mt-0 h-fit w-full rounded-lg bg-hero-dark-700 p-6 shadow">
       <div class="mb-4 flex items-center justify-between">
         <app-card-type-tag [text]="card.type"></app-card-type-tag>
         <app-favorite-button
@@ -21,8 +20,8 @@
       <h1 class="text-xl font-semibold text-white sm:text-2xl">
         {{ card.name }}
       </h1>
-      <div class="mt-2 space-y-2 border-t border-gray-700 pt-4"></div>
-      <p class="mb-6 text-gray-400">
+      <div class="mt-2 space-y-2 border-t border-hero-dark-600 pt-4"></div>
+      <p class="mb-6 text-hero-light-300">
         {{ card.description }}
       </p>
       <div class="flex items-center justify-between">
@@ -33,30 +32,14 @@
             alt="" />
           <div class="font-medium text-white">
             <div>Jese Leos</div>
-            <div class="text-sm text-gray-400">23 cards</div>
+            <div class="text-sm text-hero-light-300">23 cards</div>
           </div>
         </div>
-        <button
-          type="button"
-          class="inline-flex items-center rounded-lg bg-yellow-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-yellow-700 focus:outline-none focus:ring-4 focus:ring-yellow-900">
-          <svg
-            class="-ms-2 me-2 h-5 w-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            viewBox="0 0 24 24">
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4" />
-          </svg>
-
-          Download
-        </button>
+        <app-button
+          [text]="'Download'"
+          [color]="'primary'"
+          [size]="'medium'"
+          [iconName]="'download'"></app-button>
       </div>
     </div>
   </div>

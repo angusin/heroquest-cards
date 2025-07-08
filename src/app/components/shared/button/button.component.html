@@ -1,0 +1,24 @@
+<button
+  [class]="
+    'btn btn-' +
+    color() +
+    ' btn-' +
+    size() +
+    ' ' +
+    (rounded() ? 'rounded-full' : 'rounded-lg')
+  "
+  (click)="onButtonClick()"
+  [disabled]="disabled()"
+  class="font-medium transition-colors duration-200">
+  <!-- Icon (if provided) -->
+  <app-icon
+    *ngIf="iconNameValue"
+    [name]="iconNameValue"
+    [size]="iconSize()"
+    className="mr-2"
+    color="currentColor">
+  </app-icon>
+
+  <!-- Button text -->
+  <span>{{ text() }}</span>
+</button>

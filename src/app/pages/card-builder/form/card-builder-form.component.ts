@@ -2,7 +2,6 @@ import { Component, EventEmitter, output, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card-builder-form',
-  imports: [],
   templateUrl: './card-builder-form.component.html',
   styleUrl: './card-builder-form.component.scss',
 })
@@ -16,6 +15,10 @@ export class CardBuilderFormComponent {
   defendDiceChange = output<number>();
   bodyPointsChange = output<number>();
   mindPointsChange = output<number>();
+
+  // Track selected file names
+  selectedMonsterImageName = '';
+  selectedMonsterIconName = '';
 
   onMonsterNameChange(event: Event): void {
     const input = event.target as HTMLInputElement;
@@ -56,6 +59,9 @@ export class CardBuilderFormComponent {
     const file = (event.target as HTMLInputElement)?.files?.[0];
     if (!file) return;
 
+    // Store the filename
+    this.selectedMonsterImageName = file.name;
+
     const reader = new FileReader();
     reader.onload = () => {
       const image = new Image();
@@ -71,6 +77,9 @@ export class CardBuilderFormComponent {
   onMonsterIconUpload(event: Event): void {
     const file = (event.target as HTMLInputElement)?.files?.[0];
     if (!file) return;
+
+    // Store the filename
+    this.selectedMonsterIconName = file.name;
 
     const reader = new FileReader();
     reader.onload = () => {

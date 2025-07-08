@@ -6,6 +6,8 @@ module.exports = {
       colors: {
         hero: {
           primary: '#FFC400', // Golden yellow for primary actions and accents
+          'primary-accent': '#dda404', // Golden yellow dark for hover states
+          'primary-focus': '#876402', // Golden yellow darker for focus border
           secondary: '#2B2B2B', // Darker gray for cards and sections
           dark: '#1A1A1A', // Very dark background
           light: '#E5E5E5', // Light gray for text

@@ -1,11 +1,11 @@
-import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+import { Injectable, PLATFORM_ID, inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FlowbiteService {
-  constructor(@Inject(PLATFORM_ID) private platformId: string) {}
+  platformId = inject(PLATFORM_ID);
 
   loadFlowbite(callback: (flowbite: unknown) => void) {
     if (isPlatformBrowser(this.platformId)) {
