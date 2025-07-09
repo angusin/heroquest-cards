@@ -16,14 +16,14 @@ export class CarouselComponent {
   scrollLeft(): void {
     const container = document.querySelector('.carousel-container');
     if (container) {
-      container.scrollBy({ left: -300, behavior: 'smooth' });
+      container.scrollBy({ left: -298, behavior: 'smooth' });
     }
   }
 
   scrollRight(): void {
     const container = document.querySelector('.carousel-container');
     if (container) {
-      container.scrollBy({ left: 300, behavior: 'smooth' });
+      container.scrollBy({ left: 298, behavior: 'smooth' });
     }
   }
 }
