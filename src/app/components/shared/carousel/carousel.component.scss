@@ -1,9 +1,5 @@
-// Carousel component styles
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
+.carousel-container {
+  margin: 0 calc(-1 * 16px);
+  padding: 0 16px;
+  scroll-padding-left: 16px;
 }

@@ -38,11 +38,25 @@
     </div>
   </div>
 
-  <div class="carousel-container overflow-x-auto scrollbar-hide">
-    <div class="flex gap-[18px]">
-      <div *ngFor="let card of cards" class="w-[280px] flex-shrink-0">
+  <div class="flex justify-center">
+    <ul class="carousel-container flex gap-4 overflow-auto scrollbar-hide">
+      <li *ngFor="let card of cards" class="w-[280px] flex-shrink-0">
         <app-card-container [cardInfo]="card"></app-card-container>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </div>
+
+<!-- EJEMPLO OMAR ACELERADORES -->
+<!-- <section class="flex justify-center">
+  <ul class="container flex overflow-auto">
+    @for (item of sortedData(); track item.position) {
+      <li>
+        <app-accelerator-item
+          [data]="item"
+          [isSmall]="isSmall()"
+          (click)="action(item.target)"></app-accelerator-item>
+      </li>
+    }
+  </ul>
+</section> -->
